@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ###############################################################################
 # Set default behavior to automatically normalize line endings.
 ###############################################################################
@@ -63,3 +64,7 @@
 #*.RTF   diff=astextplain
 
 **/wwwroot/lib/** linguist-vendored
+=======
+**/wwwroot/lib/** linguist-vendored
+**/wwwroot/css/** linguist-vendored
+>>>>>>> 4366b2051a6c14639afe4fe4a65a57bc8ffaddf8
