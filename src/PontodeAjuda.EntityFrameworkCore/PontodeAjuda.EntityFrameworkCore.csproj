@@ -20,6 +20,13 @@
     <None Remove="Migrations\**" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Migrations\20200811233701_Initial.cs" />
+    <Compile Include="Migrations\20200811233701_Initial.Designer.cs" />
+    <Compile Include="Migrations\20200812044452_Status.cs" />
+    <Compile Include="Migrations\20200812044452_Status.Designer.cs" />
+    <Compile Include="Migrations\PontodeAjudaDbContextModelSnapshot.cs" />
+  </ItemGroup>
+  <ItemGroup>
     <ProjectReference Include="..\PontodeAjuda.Core\PontodeAjuda.Core.csproj" />
   </ItemGroup>
   <ItemGroup>

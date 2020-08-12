@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using PontodeAjuda.EntityFrameworkCore;
 
 namespace PontodeAjuda.Migrations
 {
     [DbContext(typeof(PontodeAjudaDbContext))]
-    partial class PontodeAjudaDbContextModelSnapshot : ModelSnapshot
+    [Migration("20200812044452_Status")]
+    partial class Status
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

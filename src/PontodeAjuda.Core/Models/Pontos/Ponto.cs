@@ -1,6 +1,7 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Threading.Tasks;
 using Abp.Domain.Entities;
 using Abp.Domain.Entities.Auditing;
 using Abp.Timing;
@@ -26,10 +27,13 @@ namespace PontodeAjuda
         [Required]
         public Suprimento Suprimentos { get; set; }
         public DateTime CreationTime { get; set; }
+        public PontoState Status { get; set; }
+
         public Ponto()
         {
             CreationTime = Clock.Now;
             DataFinal = DataFinal;
+            Status = PontoState.Aberto;
         }
 
         public Ponto(string nome, string descricao, string endereco, string telefone, DateTime dataFinal, Suprimento suprimentos)
@@ -41,6 +45,12 @@ namespace PontodeAjuda
             DataFinal = dataFinal;
             Suprimentos = suprimentos;
             CreationTime = Clock.Now;
+            Status = PontoState.Aberto;
         }
+    }
+    public enum PontoState : byte
+    {
+        Aberto = 0,
+        Fechado = 0
     }
 }
