@@ -20,6 +20,13 @@ namespace PontodeAjuda.Web.Startup
                         )
                 ).AddItem(
                     new MenuItemDefinition(
+                        "Pontos de Ajuda",
+                        L("Pontos de Ajuda"),
+                        url: "Pontos",
+                        icon: "fa fa-map-marker"
+                        )
+                ).AddItem(
+                    new MenuItemDefinition(
                         PageNames.About,
                         L("About"),
                         url: "Home/About",
