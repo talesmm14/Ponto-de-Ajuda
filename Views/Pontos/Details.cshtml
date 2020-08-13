@@ -1,13 +1,13 @@
 ﻿@model PontoDeAjuda.Ponto
 
 @{
-    ViewBag.Title = "Details";
+    ViewBag.Title = "Detalhes";
 }
 
-<h2>Details</h2>
+<h2>Detalhes</h2>
 
 <div>
-    <h4>Ponto</h4>
+    <h4>Ponto de Ajuda</h4>
     <hr />
     <dl class="dl-horizontal">
         <dt>
@@ -64,6 +64,31 @@
 
         <dd>
             @Html.DisplayFor(model => model.Status)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Doacoes)
+        </dt>
+
+        <dd>
+            <table class="table">
+                <tr>
+                    <th>Doação</th>
+                </tr>
+                <tr>
+                    <th>icone</th>
+                </tr>
+                @foreach (var doacao in Model.Doacoes)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => doacao.Nome)
+                        </td>
+                        <td>
+                            <i class="@Html.DisplayFor(modelItem => doacao.icon)"></i>
+                        </td>
+                    </tr>
+                }
+            </table>
         </dd>
 
     </dl>

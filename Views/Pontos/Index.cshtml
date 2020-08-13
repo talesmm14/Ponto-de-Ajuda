@@ -1,10 +1,10 @@
 ﻿@model IEnumerable<PontoDeAjuda.Ponto>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Pontos";
 }
 
-<h2>Index</h2>
+<h2>Pontos</h2>
 
 <p>
     @Html.ActionLink("Create New", "Create")
@@ -32,7 +32,9 @@
         <th>
             @Html.DisplayNameFor(model => model.Status)
         </th>
-        <th></th>
+        <th>
+            Suprimentos
+        </th><th></th>
     </tr>
 
 @foreach (var item in Model) {
@@ -59,6 +61,13 @@
             @Html.DisplayFor(modelItem => item.Status)
         </td>
         <td>
+            @foreach (var doacao in item.Doacoes)
+            {
+                @doacao.Nome @:  <i class="@doacao.icon"></i> <br />
+            }
+            </td>
+        <td>
+            @Html.ActionLink("Select", "Index", new { id=item.PontoID }) |
             @Html.ActionLink("Edit", "Edit", new { id=item.PontoID }) |
             @Html.ActionLink("Details", "Details", new { id=item.PontoID }) |
             @Html.ActionLink("Delete", "Delete", new { id=item.PontoID })

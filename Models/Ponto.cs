@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
@@ -13,16 +14,37 @@ namespace PontoDeAjuda
         public int PontoID { get; set; }
         [Required]
         [StringLength(MaxTitleLength)]
+        [Display(Name = "Nome do local")]
         public string Nome { get; set; }
         [StringLength(MaxDescriptionLength)]
+        [Display(Name = "Descrição")]
         public string Descricao { get; set; }
         [Required]
         [StringLength(MaxDescriptionLength)]
+        [Display(Name = "Endereço")]
         public string Endereco { get; set; }
+        [Display(Name = "Telefone")]
         public string Telefone { get; set; }
+        [DataType(DataType.Date)]
+        [DisplayFormat(DataFormatString = "{0:dd-MM-yyyy}", ApplyFormatInEditMode = true)]
+        [Display(Name = "Data Final (Se existir)")]
         public DateTime DataFinal { get; set; }
         [Required]
-        public Suprimento Suprimentos { get; set; }
+        [Display(Name = "Doações")]
+        private ICollection<Doacao> _doacoes;
+        public ICollection<Doacao> Doacoes
+        {
+            get
+            {
+                return _doacoes ?? (_doacoes = new List<Doacao>());
+            }
+            set
+            {
+                _doacoes = value;
+            }
+        }
+        [DataType(DataType.Date)]
+        [DisplayFormat(DataFormatString = "{0:dd-MM-yyyy}", ApplyFormatInEditMode = true)]
         public DateTime CreationTime { get; set; }
         public PontoState Status { get; set; }
 
@@ -33,14 +55,15 @@ namespace PontoDeAjuda
             Status = PontoState.Aberto;
         }
 
-        public Ponto(string nome, string descricao, string endereco, string telefone, DateTime dataFinal, Suprimento suprimentos)
+        public Ponto(int pontoID, string nome, string descricao, string endereco, string telefone, DateTime dataFinal, ICollection<Doacao> doacoes)
         {
+            PontoID = pontoID;
             Nome = nome;
             Descricao = descricao;
             Endereco = endereco;
             Telefone = telefone;
             DataFinal = dataFinal;
-            Suprimentos = suprimentos;
+            Doacoes = doacoes;
             CreationTime = DateTime.Now;
             Status = PontoState.Aberto;
         }

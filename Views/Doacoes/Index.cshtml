@@ -1,4 +1,4 @@
-﻿@model IEnumerable<PontoDeAjuda.Suprimento>
+﻿@model IEnumerable<PontoDeAjuda.Doacao>
 
 @{
     ViewBag.Title = "Index";
@@ -29,9 +29,9 @@
             @Html.DisplayFor(modelItem => item.icon)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.SuprimentoID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.SuprimentoID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.SuprimentoID })
+            @Html.ActionLink("Edit", "Edit", new { id=item.DoacaoID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.DoacaoID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.DoacaoID })
         </td>
     </tr>
 }

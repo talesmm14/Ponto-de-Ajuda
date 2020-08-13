@@ -127,15 +127,21 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\DoacoesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\PontosController.cs" />
-    <Compile Include="Controllers\SuprimentosController.cs" />
     <Compile Include="DAL\PontoContext.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202008130649214_initial.cs" />
+    <Compile Include="Migrations\202008130649214_initial.designer.cs">
+      <DependentUpon>202008130649214_initial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\AssignedDoacaoData.cs" />
     <Compile Include="Models\Ponto.cs" />
-    <Compile Include="Models\Suprimento.cs" />
+    <Compile Include="Models\Doacao.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -179,11 +185,11 @@
     <Content Include="Views\Pontos\Details.cshtml" />
     <Content Include="Views\Pontos\Edit.cshtml" />
     <Content Include="Views\Pontos\Index.cshtml" />
-    <Content Include="Views\Suprimentos\Create.cshtml" />
-    <Content Include="Views\Suprimentos\Delete.cshtml" />
-    <Content Include="Views\Suprimentos\Details.cshtml" />
-    <Content Include="Views\Suprimentos\Edit.cshtml" />
-    <Content Include="Views\Suprimentos\Index.cshtml" />
+    <Content Include="Views\Doacoes\Create.cshtml" />
+    <Content Include="Views\Doacoes\Delete.cshtml" />
+    <Content Include="Views\Doacoes\Details.cshtml" />
+    <Content Include="Views\Doacoes\Edit.cshtml" />
+    <Content Include="Views\Doacoes\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -200,6 +206,11 @@
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.4.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202008130649214_initial.resx">
+      <DependentUpon>202008130649214_initial.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

@@ -11,107 +11,107 @@ using PontoDeAjuda.DAL;
 
 namespace PontoDeAjuda.Controllers
 {
-    public class SuprimentosController : Controller
+    public class DoacoesController : Controller
     {
         private PontoContext db = new PontoContext();
 
-        // GET: Suprimentos
+        // GET: Doacoes
         public ActionResult Index()
         {
-            return View(db.Suprimentos.ToList());
+            return View(db.Doacoes.ToList());
         }
 
-        // GET: Suprimentos/Details/5
+        // GET: Doacoes/Details/5
         public ActionResult Details(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Suprimento suprimento = db.Suprimentos.Find(id);
-            if (suprimento == null)
+            Doacao doacao = db.Doacoes.Find(id);
+            if (doacao == null)
             {
                 return HttpNotFound();
             }
-            return View(suprimento);
+            return View(doacao);
         }
 
-        // GET: Suprimentos/Create
+        // GET: Doacoes/Create
         public ActionResult Create()
         {
             return View();
         }
 
-        // POST: Suprimentos/Create
+        // POST: Doacoes/Create
         // Para proteger-se contra ataques de excesso de postagem, ative as propriedades específicas às quais deseja se associar. 
         // Para obter mais detalhes, confira https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "SuprimentoID,Nome,icon")] Suprimento suprimento)
+        public ActionResult Create([Bind(Include = "DoacaoID,Nome,icon")] Doacao doacao)
         {
             if (ModelState.IsValid)
             {
-                db.Suprimentos.Add(suprimento);
+                db.Doacoes.Add(doacao);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
 
-            return View(suprimento);
+            return View(doacao);
         }
 
-        // GET: Suprimentos/Edit/5
+        // GET: Doacoes/Edit/5
         public ActionResult Edit(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Suprimento suprimento = db.Suprimentos.Find(id);
-            if (suprimento == null)
+            Doacao doacao = db.Doacoes.Find(id);
+            if (doacao == null)
             {
                 return HttpNotFound();
             }
-            return View(suprimento);
+            return View(doacao);
         }
 
-        // POST: Suprimentos/Edit/5
+        // POST: Doacoes/Edit/5
         // Para proteger-se contra ataques de excesso de postagem, ative as propriedades específicas às quais deseja se associar. 
         // Para obter mais detalhes, confira https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "SuprimentoID,Nome,icon")] Suprimento suprimento)
+        public ActionResult Edit([Bind(Include = "DoacaoID,Nome,icon")] Doacao doacao)
         {
             if (ModelState.IsValid)
             {
-                db.Entry(suprimento).State = EntityState.Modified;
+                db.Entry(doacao).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            return View(suprimento);
+            return View(doacao);
         }
 
-        // GET: Suprimentos/Delete/5
+        // GET: Doacoes/Delete/5
         public ActionResult Delete(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Suprimento suprimento = db.Suprimentos.Find(id);
-            if (suprimento == null)
+            Doacao doacao = db.Doacoes.Find(id);
+            if (doacao == null)
             {
                 return HttpNotFound();
             }
-            return View(suprimento);
+            return View(doacao);
         }
 
-        // POST: Suprimentos/Delete/5
+        // POST: Doacoes/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            Suprimento suprimento = db.Suprimentos.Find(id);
-            db.Suprimentos.Remove(suprimento);
+            Doacao doacao = db.Doacoes.Find(id);
+            db.Doacoes.Remove(doacao);
             db.SaveChanges();
             return RedirectToAction("Index");
         }

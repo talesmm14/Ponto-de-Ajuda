@@ -1,4 +1,4 @@
-﻿@model PontoDeAjuda.Suprimento
+﻿@model PontoDeAjuda.Doacao
 
 @{
     ViewBag.Title = "Edit";
@@ -12,10 +12,10 @@
     @Html.AntiForgeryToken()
     
     <div class="form-horizontal">
-        <h4>Suprimento</h4>
+        <h4>Doacao</h4>
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-        @Html.HiddenFor(model => model.SuprimentoID)
+        @Html.HiddenFor(model => model.DoacaoID)
 
         <div class="form-group">
             @Html.LabelFor(model => model.Nome, htmlAttributes: new { @class = "control-label col-md-2" })
