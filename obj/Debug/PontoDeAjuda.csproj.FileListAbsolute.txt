@@ -37,6 +37,7 @@ C:\Users\tales\source\repos\PontoDeAjuda\bin\EntityFramework.SqlServer.dll
 C:\Users\tales\source\repos\PontoDeAjuda\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
 C:\Users\tales\source\repos\PontoDeAjuda\bin\Microsoft.Web.Infrastructure.dll
 C:\Users\tales\source\repos\PontoDeAjuda\bin\Newtonsoft.Json.dll
+C:\Users\tales\source\repos\PontoDeAjuda\bin\System.Numerics.Vectors.dll
 C:\Users\tales\source\repos\PontoDeAjuda\bin\System.Web.Helpers.dll
 C:\Users\tales\source\repos\PontoDeAjuda\bin\System.Web.Mvc.dll
 C:\Users\tales\source\repos\PontoDeAjuda\bin\System.Web.Optimization.dll
@@ -64,11 +65,9 @@ C:\Users\tales\source\repos\PontoDeAjuda\bin\pt-br\System.Web.Razor.resources.dl
 C:\Users\tales\source\repos\PontoDeAjuda\bin\pt-br\System.Web.WebPages.resources.dll
 C:\Users\tales\source\repos\PontoDeAjuda\bin\pt-br\System.Web.WebPages.Deployment.resources.dll
 C:\Users\tales\source\repos\PontoDeAjuda\bin\pt-br\System.Web.WebPages.Razor.resources.dll
-C:\Users\tales\source\repos\PontoDeAjuda\obj\Debug\PontoDeAjuda.csprojAssemblyReference.cache
 C:\Users\tales\source\repos\PontoDeAjuda\obj\Debug\PontoDeAjuda.Migrations.initial.resources
 C:\Users\tales\source\repos\PontoDeAjuda\obj\Debug\PontoDeAjuda.csproj.GenerateResource.cache
 C:\Users\tales\source\repos\PontoDeAjuda\obj\Debug\PontoDeAjuda.csproj.CoreCompileInputs.cache
 C:\Users\tales\source\repos\PontoDeAjuda\obj\Debug\PontoDeAjuda.csproj.CopyComplete
 C:\Users\tales\source\repos\PontoDeAjuda\obj\Debug\PontoDeAjuda.dll
 C:\Users\tales\source\repos\PontoDeAjuda\obj\Debug\PontoDeAjuda.pdb
-C:\Users\tales\source\repos\PontoDeAjuda\bin\System.Numerics.Vectors.dll
