@@ -129,6 +129,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\PontosController.cs" />
+    <Compile Include="Controllers\SuprimentosController.cs" />
     <Compile Include="DAL\PontoContext.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -178,6 +179,11 @@
     <Content Include="Views\Pontos\Details.cshtml" />
     <Content Include="Views\Pontos\Edit.cshtml" />
     <Content Include="Views\Pontos\Index.cshtml" />
+    <Content Include="Views\Suprimentos\Create.cshtml" />
+    <Content Include="Views\Suprimentos\Delete.cshtml" />
+    <Content Include="Views\Suprimentos\Details.cshtml" />
+    <Content Include="Views\Suprimentos\Edit.cshtml" />
+    <Content Include="Views\Suprimentos\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
