@@ -71,3 +71,4 @@ C:\Users\tales\source\repos\PontoDeAjuda\obj\Debug\PontoDeAjuda.csproj.CoreCompi
 C:\Users\tales\source\repos\PontoDeAjuda\obj\Debug\PontoDeAjuda.csproj.CopyComplete
 C:\Users\tales\source\repos\PontoDeAjuda\obj\Debug\PontoDeAjuda.dll
 C:\Users\tales\source\repos\PontoDeAjuda\obj\Debug\PontoDeAjuda.pdb
+C:\Users\tales\source\repos\PontoDeAjuda\obj\Debug\PontoDeAjuda.csprojAssemblyReference.cache
