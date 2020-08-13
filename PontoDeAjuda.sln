@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30406.217
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PontoDeAjuda", "PontoDeAjuda.csproj", "{D6531946-1CF7-415B-91AA-6EA5B13DD45F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D6531946-1CF7-415B-91AA-6EA5B13DD45F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D6531946-1CF7-415B-91AA-6EA5B13DD45F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D6531946-1CF7-415B-91AA-6EA5B13DD45F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D6531946-1CF7-415B-91AA-6EA5B13DD45F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3A6397D7-5ECF-469A-8AA3-DAE4D360A5AA}
+	EndGlobalSection
+EndGlobal
