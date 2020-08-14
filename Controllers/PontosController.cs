@@ -53,7 +53,7 @@ namespace PontoDeAjuda.Controllers
         // Para obter mais detalhes, confira https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "PontoID,Nome,Descricao,Endereco,Telefone,DataFinal,CreationTime,Status")] Ponto ponto, string[] selectedDoacoes)
+        public ActionResult Create([Bind(Include = "PontoID,Nome,Descricao,Endereco,Telefone,DataFinal")] Ponto ponto, string[] selectedDoacoes)
         {
             if (selectedDoacoes != null)
             {
@@ -95,7 +95,7 @@ namespace PontoDeAjuda.Controllers
         private void PopulateAssignedDoacaoData(Ponto ponto)
         {
             var allDoacoes = db.Doacoes;
-            var Doacoes = new HashSet<int>(ponto.Doacoes.Select(c => c.DoacaoID));
+            var pontoDoacoes = new HashSet<int>(ponto.Doacoes.Select(c => c.DoacaoID));
             var viewModel = new List<AssignedDoacaoData>();
             foreach (var doacao in allDoacoes)
             {
@@ -103,8 +103,7 @@ namespace PontoDeAjuda.Controllers
                 {
                     DoacaoID = doacao.DoacaoID,
                     Nome = doacao.Nome,
-                    icon = doacao.icon,
-                    Assigned = Doacoes.Contains(doacao.DoacaoID)
+                    Assigned = pontoDoacoes.Contains(doacao.DoacaoID)
                 });
             }
             ViewBag.Doacoes = viewModel;
@@ -120,18 +119,18 @@ namespace PontoDeAjuda.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            var ponto = db.Pontos
+            var pontoToUpdate = db.Pontos
                 .Include(i => i.Doacoes)
                 .Where(i => i.PontoID == id)
                 .Single();
 
-            if (TryUpdateModel(ponto, "",
+            if (TryUpdateModel(pontoToUpdate, "",
             new string[] { "Nome", "Descricao", "Endereco", "Telefone", "DataFinal" }))
             {
                 try
                 {
 
-                    UpdatePondodeAjuda(selectedDoacoes, ponto);
+                    UpdatePondodeAjuda(selectedDoacoes, pontoToUpdate);
 
                     db.SaveChanges();
 
@@ -143,34 +142,34 @@ namespace PontoDeAjuda.Controllers
                     ModelState.AddModelError("", "Unable to save changes. Try again, and if the problem persists, see your system administrator.");
                 }
             }
-            PopulateAssignedDoacaoData(ponto);
-            return View(ponto);
+            PopulateAssignedDoacaoData(pontoToUpdate);
+            return View(pontoToUpdate);
         }
-        private void UpdatePondodeAjuda(string[] selectedPontos, Ponto ponto)
+        private void UpdatePondodeAjuda(string[] selectedAjudas, Ponto pontoToUpdate)
         {
-            if (ponto == null)
+            if (selectedAjudas == null)
             {
-                ponto.Doacoes = new List<Doacao>();
+                pontoToUpdate.Doacoes = new List<Doacao>();
                 return;
             }
 
-            var selectedPontosHS = new HashSet<string>(selectedPontos);
+            var selectedAjudasHS = new HashSet<string>(selectedAjudas);
             var pontosDeAjuda = new HashSet<int>
-                (ponto.Doacoes.Select(c => c.DoacaoID));
+                (pontoToUpdate.Doacoes.Select(c => c.DoacaoID));
             foreach (var doacoes in db.Doacoes)
             {
-                if (selectedPontosHS.Contains(doacoes.DoacaoID.ToString()))
+                if (selectedAjudasHS.Contains(doacoes.DoacaoID.ToString()))
                 {
                     if (!pontosDeAjuda.Contains(doacoes.DoacaoID))
                     {
-                        ponto.Doacoes.Add(doacoes);
+                        pontoToUpdate.Doacoes.Add(doacoes);
                     }
                 }
                 else
                 {
                     if (pontosDeAjuda.Contains(doacoes.DoacaoID))
                     {
-                        ponto.Doacoes.Remove(doacoes);
+                        pontoToUpdate.Doacoes.Remove(doacoes);
                     }
                 }
             }
