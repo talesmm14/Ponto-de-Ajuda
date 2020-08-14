@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props')" />
+  <Import Project="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -8,7 +8,7 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{D6531946-1CF7-415B-91AA-6EA5B13DD45F}</ProjectGuid>
+    <ProjectGuid>{E07ECA29-593C-4CEA-8F5F-113BAC855BB9}</ProjectGuid>
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
@@ -18,14 +18,13 @@
     <MvcBuildViews>false</MvcBuildViews>
     <UseIISExpress>true</UseIISExpress>
     <Use64BitIISExpress />
-    <IISExpressSSLPort>44391</IISExpressSSLPort>
+    <IISExpressSSLPort>44399</IISExpressSSLPort>
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
     <UseGlobalApplicationHostFile />
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
-    <TypeScriptToolsVersion>3.9</TypeScriptToolsVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -46,60 +45,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>packages\EntityFramework.6.1.0\lib\net45\EntityFramework.dll</HintPath>
-    </Reference>
-    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>packages\EntityFramework.6.1.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.AspNet.Identity.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>packages\Microsoft.AspNet.Identity.Core.2.2.3\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.AspNet.Identity.EntityFramework, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>packages\Microsoft.AspNet.Identity.EntityFramework.2.2.3\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.AspNet.Identity.Owin, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>packages\Microsoft.AspNet.Identity.Owin.2.2.3\lib\net45\Microsoft.AspNet.Identity.Owin.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=3.6.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
-    </Reference>
     <Reference Include="Microsoft.CSharp" />
-    <Reference Include="Microsoft.Owin, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>packages\Microsoft.Owin.4.1.0\lib\net45\Microsoft.Owin.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.Owin.Host.SystemWeb, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>packages\Microsoft.Owin.Host.SystemWeb.4.1.0\lib\net45\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.Owin.Security, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>packages\Microsoft.Owin.Security.3.0.1\lib\net45\Microsoft.Owin.Security.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.Owin.Security.Cookies, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>packages\Microsoft.Owin.Security.Cookies.3.0.1\lib\net45\Microsoft.Owin.Security.Cookies.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.Owin.Security.OAuth, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>packages\Microsoft.Owin.Security.OAuth.3.0.1\lib\net45\Microsoft.Owin.Security.OAuth.dll</HintPath>
-    </Reference>
-    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <HintPath>packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
-    </Reference>
-    <Reference Include="Owin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=f0ebd12fd5e55cc5, processorArchitecture=MSIL">
-      <HintPath>packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
-    </Reference>
-    <Reference Include="SendGrid, Version=9.20.0.0, Culture=neutral, PublicKeyToken=4f047e93159395ca, processorArchitecture=MSIL">
-      <HintPath>packages\SendGrid.9.20.0\lib\net452\SendGrid.dll</HintPath>
-    </Reference>
-    <Reference Include="StarkbankEcdsa, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>packages\starkbank-ecdsa.1.2.0\lib\net452\StarkbankEcdsa.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
-    <Reference Include="System.Numerics.Vectors, Version=4.1.3.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <HintPath>packages\System.Numerics.Vectors.4.4.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -150,6 +99,9 @@
       <Private>True</Private>
       <HintPath>packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
     </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>packages\Newtonsoft.Json.12.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="WebGrease">
       <Private>True</Private>
       <HintPath>packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
@@ -157,6 +109,56 @@
     <Reference Include="Antlr3.Runtime">
       <Private>True</Private>
       <HintPath>packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Core">
+      <HintPath>packages\Microsoft.AspNet.Identity.Core.2.2.3\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Owin">
+      <HintPath>packages\Microsoft.AspNet.Identity.Owin.2.2.3\lib\net45\Microsoft.AspNet.Identity.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.EntityFramework">
+      <HintPath>packages\Microsoft.AspNet.Identity.EntityFramework.2.2.3\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Owin">
+      <HintPath>packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin">
+      <HintPath>packages\Microsoft.Owin.4.0.1\lib\net45\Microsoft.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Host.SystemWeb">
+      <HintPath>packages\Microsoft.Owin.Host.SystemWeb.4.0.1\lib\net45\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security">
+      <HintPath>packages\Microsoft.Owin.Security.4.0.1\lib\net45\Microsoft.Owin.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Cookies">
+      <HintPath>packages\Microsoft.Owin.Security.Facebook.4.0.1\lib\net45\Microsoft.Owin.Security.Facebook.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Cookies">
+      <HintPath>packages\Microsoft.Owin.Security.Cookies.4.0.1\lib\net45\Microsoft.Owin.Security.Cookies.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Google">
+      <HintPath>packages\Microsoft.Owin.Security.Google.4.0.1\lib\net45\Microsoft.Owin.Security.Google.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Twitter">
+      <HintPath>packages\Microsoft.Owin.Security.Twitter.4.0.1\lib\net45\Microsoft.Owin.Security.Twitter.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.MicrosoftAccount">
+      <HintPath>packages\Microsoft.Owin.Security.MicrosoftAccount.4.0.1\lib\net45\Microsoft.Owin.Security.MicrosoftAccount.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.OAuth">
+      <HintPath>packages\Microsoft.Owin.Security.OAuth.4.0.1\lib\net45\Microsoft.Owin.Security.OAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -174,25 +176,21 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202008130649214_initial.cs" />
-    <Compile Include="Migrations\202008130649214_initial.designer.cs">
-      <DependentUpon>202008130649214_initial.cs</DependentUpon>
+    <Compile Include="Migrations\202008140712373_InitialCreate.cs" />
+    <Compile Include="Migrations\202008140712373_InitialCreate.Designer.cs">
+      <DependentUpon>202008140712373_InitialCreate.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\AssignedDoacaoData.cs" />
+    <Compile Include="Models\Doacao.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\Ponto.cs" />
-    <Compile Include="Models\Doacao.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\bootstrap-grid.css" />
-    <Content Include="Content\bootstrap-grid.min.css" />
-    <Content Include="Content\bootstrap-reboot.css" />
-    <Content Include="Content\bootstrap-reboot.min.css" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -201,491 +199,6 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
-    <Content Include="packages\bootstrap.3.4.1\contentFiles\Content\bootstrap-theme.css" />
-    <Content Include="packages\bootstrap.3.4.1\contentFiles\Content\bootstrap-theme.min.css" />
-    <Content Include="packages\bootstrap.3.4.1\contentFiles\Content\bootstrap.css" />
-    <Content Include="packages\bootstrap.3.4.1\contentFiles\Content\bootstrap.min.css" />
-    <Content Include="packages\bootstrap.3.4.1\contentFiles\fonts\glyphicons-halflings-regular.svg" />
-    <Content Include="packages\bootstrap.3.4.1\contentFiles\Scripts\bootstrap.js" />
-    <Content Include="packages\bootstrap.3.4.1\contentFiles\Scripts\bootstrap.min.js" />
-    <Content Include="packages\bootstrap.3.4.1\content\Content\bootstrap-theme.css" />
-    <Content Include="packages\bootstrap.3.4.1\content\Content\bootstrap-theme.min.css" />
-    <Content Include="packages\bootstrap.3.4.1\content\Content\bootstrap.css" />
-    <Content Include="packages\bootstrap.3.4.1\content\Content\bootstrap.min.css" />
-    <Content Include="packages\bootstrap.3.4.1\content\fonts\glyphicons-halflings-regular.svg" />
-    <Content Include="packages\bootstrap.3.4.1\content\Scripts\bootstrap.js" />
-    <Content Include="packages\bootstrap.3.4.1\content\Scripts\bootstrap.min.js" />
-    <Content Include="packages\bootstrap.3.4.1\LICENSE.txt" />
-    <Content Include="packages\bootstrap.4.5.2\bootstrap.png" />
-    <Content Include="packages\bootstrap.4.5.2\contentFiles\any\any\wwwroot\css\bootstrap-grid.css" />
-    <Content Include="packages\bootstrap.4.5.2\contentFiles\any\any\wwwroot\css\bootstrap-grid.min.css" />
-    <Content Include="packages\bootstrap.4.5.2\contentFiles\any\any\wwwroot\css\bootstrap-reboot.css" />
-    <Content Include="packages\bootstrap.4.5.2\contentFiles\any\any\wwwroot\css\bootstrap-reboot.min.css" />
-    <Content Include="packages\bootstrap.4.5.2\contentFiles\any\any\wwwroot\css\bootstrap.css" />
-    <Content Include="packages\bootstrap.4.5.2\contentFiles\any\any\wwwroot\css\bootstrap.min.css" />
-    <Content Include="packages\bootstrap.4.5.2\contentFiles\any\any\wwwroot\js\bootstrap.bundle.js" />
-    <Content Include="packages\bootstrap.4.5.2\contentFiles\any\any\wwwroot\js\bootstrap.bundle.min.js" />
-    <Content Include="packages\bootstrap.4.5.2\contentFiles\any\any\wwwroot\js\bootstrap.js" />
-    <Content Include="packages\bootstrap.4.5.2\contentFiles\any\any\wwwroot\js\bootstrap.min.js" />
-    <Content Include="packages\bootstrap.4.5.2\content\Content\bootstrap-grid.css" />
-    <Content Include="packages\bootstrap.4.5.2\content\Content\bootstrap-grid.min.css" />
-    <Content Include="packages\bootstrap.4.5.2\content\Content\bootstrap-reboot.css" />
-    <Content Include="packages\bootstrap.4.5.2\content\Content\bootstrap-reboot.min.css" />
-    <Content Include="packages\bootstrap.4.5.2\content\Content\bootstrap.css" />
-    <Content Include="packages\bootstrap.4.5.2\content\Content\bootstrap.min.css" />
-    <Content Include="packages\bootstrap.4.5.2\content\Scripts\bootstrap.bundle.js" />
-    <Content Include="packages\bootstrap.4.5.2\content\Scripts\bootstrap.bundle.min.js" />
-    <Content Include="packages\bootstrap.4.5.2\content\Scripts\bootstrap.js" />
-    <Content Include="packages\bootstrap.4.5.2\content\Scripts\bootstrap.min.js" />
-    <Content Include="packages\bootstrap.4.5.2\LICENSE.txt" />
-    <Content Include="fonts\glyphicons-halflings-regular.eot" />
-    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
-    <Content Include="fonts\glyphicons-halflings-regular.woff" />
-    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
-    <Content Include="Content\bootstrap-theme.css.map" />
-    <Content Include="Content\bootstrap-theme.min.css.map" />
-    <None Include="packages\jQuery.3.4.1\Content\Scripts\jquery-3.4.1-vsdoc.js" />
-    <Content Include="packages\jQuery.3.4.1\Content\Scripts\jquery-3.4.1.js" />
-    <Content Include="packages\jQuery.3.4.1\Content\Scripts\jquery-3.4.1.min.js" />
-    <Content Include="packages\jQuery.3.4.1\Content\Scripts\jquery-3.4.1.slim.js" />
-    <Content Include="packages\jQuery.3.4.1\Content\Scripts\jquery-3.4.1.slim.min.js" />
-    <None Include="packages\jQuery.3.4.1\Tools\jquery-3.4.1.intellisense.js" />
-    <None Include="packages\jQuery.3.5.1\Content\Scripts\jquery-3.5.1-vsdoc.js" />
-    <Content Include="packages\jQuery.3.5.1\Content\Scripts\jquery-3.5.1.js" />
-    <Content Include="packages\jQuery.3.5.1\Content\Scripts\jquery-3.5.1.min.js" />
-    <Content Include="packages\jQuery.3.5.1\Content\Scripts\jquery-3.5.1.slim.js" />
-    <Content Include="packages\jQuery.3.5.1\Content\Scripts\jquery-3.5.1.slim.min.js" />
-    <None Include="packages\jQuery.3.5.1\Tools\jquery-3.5.1.intellisense.js" />
-    <None Include="packages\jQuery.Validation.1.17.0\Content\Scripts\jquery.validate-vsdoc.js" />
-    <Content Include="packages\jQuery.Validation.1.17.0\Content\Scripts\jquery.validate.js" />
-    <Content Include="packages\jQuery.Validation.1.17.0\Content\Scripts\jquery.validate.min.js" />
-    <None Include="packages\jQuery.Validation.1.19.1\Content\Scripts\jquery.validate-vsdoc.js" />
-    <Content Include="packages\jQuery.Validation.1.19.1\Content\Scripts\jquery.validate.js" />
-    <Content Include="packages\jQuery.Validation.1.19.1\Content\Scripts\jquery.validate.min.js" />
-    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll" />
-    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml" />
-    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\Roslyn45\csc.exe" />
-    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\Roslyn45\csi.exe" />
-    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\Roslyn45\Microsoft.Build.Tasks.CodeAnalysis.dll" />
-    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\Roslyn45\Microsoft.CodeAnalysis.CSharp.dll" />
-    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\Roslyn45\Microsoft.CodeAnalysis.CSharp.Scripting.dll" />
-    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\Roslyn45\Microsoft.CodeAnalysis.dll" />
-    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\Roslyn45\Microsoft.CodeAnalysis.Scripting.dll" />
-    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\Roslyn45\Microsoft.CodeAnalysis.VisualBasic.dll" />
-    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\Roslyn45\Microsoft.DiaSymReader.Native.amd64.dll" />
-    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\Roslyn45\Microsoft.DiaSymReader.Native.x86.dll" />
-    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\Roslyn45\System.AppContext.dll" />
-    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\Roslyn45\System.Collections.Immutable.dll" />
-    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\Roslyn45\System.Diagnostics.StackTrace.dll" />
-    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\Roslyn45\System.IO.FileSystem.dll" />
-    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\Roslyn45\System.IO.FileSystem.Primitives.dll" />
-    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\Roslyn45\System.Reflection.Metadata.dll" />
-    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\Roslyn45\vbc.exe" />
-    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\Roslyn45\VBCSCompiler.exe" />
-    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\csc.exe" />
-    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\csi.exe" />
-    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\Microsoft.Build.Tasks.CodeAnalysis.dll" />
-    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\Microsoft.CodeAnalysis.CSharp.dll" />
-    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\Microsoft.CodeAnalysis.CSharp.Scripting.dll" />
-    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\Microsoft.CodeAnalysis.dll" />
-    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\Microsoft.CodeAnalysis.Scripting.dll" />
-    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\Microsoft.CodeAnalysis.VisualBasic.dll" />
-    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\Microsoft.DiaSymReader.Native.amd64.dll" />
-    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\Microsoft.DiaSymReader.Native.x86.dll" />
-    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\Microsoft.Win32.Primitives.dll" />
-    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\System.AppContext.dll" />
-    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\System.Collections.Immutable.dll" />
-    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\System.Console.dll" />
-    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\System.Diagnostics.DiagnosticSource.dll" />
-    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\System.Diagnostics.FileVersionInfo.dll" />
-    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\System.Diagnostics.StackTrace.dll" />
-    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\System.Globalization.Calendars.dll" />
-    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\System.IO.Compression.dll" />
-    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\System.IO.Compression.ZipFile.dll" />
-    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\System.IO.FileSystem.dll" />
-    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\System.IO.FileSystem.Primitives.dll" />
-    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\System.Net.Http.dll" />
-    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\System.Net.Sockets.dll" />
-    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\System.Reflection.Metadata.dll" />
-    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\System.Runtime.InteropServices.RuntimeInformation.dll" />
-    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\System.Security.Cryptography.Algorithms.dll" />
-    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\System.Security.Cryptography.Encoding.dll" />
-    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\System.Security.Cryptography.Primitives.dll" />
-    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\System.Security.Cryptography.X509Certificates.dll" />
-    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\System.Text.Encoding.CodePages.dll" />
-    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\System.Threading.Tasks.Extensions.dll" />
-    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\System.ValueTuple.dll" />
-    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\System.Xml.ReaderWriter.dll" />
-    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\System.Xml.XmlDocument.dll" />
-    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\System.Xml.XPath.dll" />
-    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\System.Xml.XPath.XDocument.dll" />
-    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\vbc.exe" />
-    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\VBCSCompiler.exe" />
-    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll" />
-    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml" />
-    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\tasks\DotNetCompilerPlatformTasks.dll" />
-    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\tasks\System.Management.dll" />
-    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\tools\Roslyn45\csc.exe" />
-    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\tools\Roslyn45\csi.exe" />
-    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\tools\Roslyn45\Microsoft.Build.Tasks.CodeAnalysis.dll" />
-    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\tools\Roslyn45\Microsoft.CodeAnalysis.CSharp.dll" />
-    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\tools\Roslyn45\Microsoft.CodeAnalysis.CSharp.Scripting.dll" />
-    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\tools\Roslyn45\Microsoft.CodeAnalysis.dll" />
-    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\tools\Roslyn45\Microsoft.CodeAnalysis.Scripting.dll" />
-    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\tools\Roslyn45\Microsoft.CodeAnalysis.VisualBasic.dll" />
-    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\tools\Roslyn45\Microsoft.DiaSymReader.Native.amd64.dll" />
-    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\tools\Roslyn45\Microsoft.DiaSymReader.Native.x86.dll" />
-    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\tools\Roslyn45\System.AppContext.dll" />
-    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\tools\Roslyn45\System.Collections.Immutable.dll" />
-    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\tools\Roslyn45\System.Diagnostics.StackTrace.dll" />
-    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\tools\Roslyn45\System.IO.FileSystem.dll" />
-    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\tools\Roslyn45\System.IO.FileSystem.Primitives.dll" />
-    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\tools\Roslyn45\System.Reflection.Metadata.dll" />
-    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\tools\Roslyn45\vbc.exe" />
-    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\tools\Roslyn45\VBCSCompiler.exe" />
-    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\tools\Roslyn46\csc.exe" />
-    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\tools\Roslyn46\csi.exe" />
-    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\tools\Roslyn46\Microsoft.Build.Tasks.CodeAnalysis.dll" />
-    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\tools\Roslyn46\Microsoft.CodeAnalysis.CSharp.dll" />
-    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\tools\Roslyn46\Microsoft.CodeAnalysis.CSharp.Scripting.dll" />
-    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\tools\Roslyn46\Microsoft.CodeAnalysis.dll" />
-    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\tools\Roslyn46\Microsoft.CodeAnalysis.Scripting.dll" />
-    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\tools\Roslyn46\Microsoft.CodeAnalysis.VisualBasic.dll" />
-    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\tools\Roslyn46\Microsoft.DiaSymReader.Native.amd64.dll" />
-    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\tools\Roslyn46\Microsoft.DiaSymReader.Native.x86.dll" />
-    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\tools\Roslyn46\Microsoft.Win32.Primitives.dll" />
-    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\tools\Roslyn46\System.AppContext.dll" />
-    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\tools\Roslyn46\System.Collections.Immutable.dll" />
-    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\tools\Roslyn46\System.Console.dll" />
-    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\tools\Roslyn46\System.Diagnostics.DiagnosticSource.dll" />
-    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\tools\Roslyn46\System.Diagnostics.FileVersionInfo.dll" />
-    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\tools\Roslyn46\System.Diagnostics.StackTrace.dll" />
-    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\tools\Roslyn46\System.Globalization.Calendars.dll" />
-    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\tools\Roslyn46\System.IO.Compression.dll" />
-    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\tools\Roslyn46\System.IO.Compression.ZipFile.dll" />
-    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\tools\Roslyn46\System.IO.FileSystem.dll" />
-    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\tools\Roslyn46\System.IO.FileSystem.Primitives.dll" />
-    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\tools\Roslyn46\System.Net.Http.dll" />
-    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\tools\Roslyn46\System.Net.Sockets.dll" />
-    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\tools\Roslyn46\System.Reflection.Metadata.dll" />
-    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\tools\Roslyn46\System.Runtime.InteropServices.RuntimeInformation.dll" />
-    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\tools\Roslyn46\System.Security.Cryptography.Algorithms.dll" />
-    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\tools\Roslyn46\System.Security.Cryptography.Encoding.dll" />
-    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\tools\Roslyn46\System.Security.Cryptography.Primitives.dll" />
-    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\tools\Roslyn46\System.Security.Cryptography.X509Certificates.dll" />
-    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\tools\Roslyn46\System.Text.Encoding.CodePages.dll" />
-    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\tools\Roslyn46\System.Threading.Tasks.Extensions.dll" />
-    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\tools\Roslyn46\System.ValueTuple.dll" />
-    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\tools\Roslyn46\System.Xml.ReaderWriter.dll" />
-    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\tools\Roslyn46\System.Xml.XmlDocument.dll" />
-    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\tools\Roslyn46\System.Xml.XPath.dll" />
-    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\tools\Roslyn46\System.Xml.XPath.XDocument.dll" />
-    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\tools\Roslyn46\vbc.exe" />
-    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\tools\Roslyn46\VBCSCompiler.exe" />
-    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\tools\Roslyn472\csc.exe" />
-    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\tools\Roslyn472\csi.exe" />
-    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\tools\Roslyn472\Microsoft.Build.Tasks.CodeAnalysis.dll" />
-    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\tools\Roslyn472\Microsoft.CodeAnalysis.CSharp.dll" />
-    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\tools\Roslyn472\Microsoft.CodeAnalysis.CSharp.Scripting.dll" />
-    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\tools\Roslyn472\Microsoft.CodeAnalysis.dll" />
-    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\tools\Roslyn472\Microsoft.CodeAnalysis.Scripting.dll" />
-    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\tools\Roslyn472\Microsoft.CodeAnalysis.VisualBasic.dll" />
-    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\tools\Roslyn472\Microsoft.DiaSymReader.Native.amd64.dll" />
-    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\tools\Roslyn472\Microsoft.DiaSymReader.Native.x86.dll" />
-    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\tools\Roslyn472\System.Buffers.dll" />
-    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\tools\Roslyn472\System.Collections.Immutable.dll" />
-    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\tools\Roslyn472\System.Memory.dll" />
-    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\tools\Roslyn472\System.Numerics.Vectors.dll" />
-    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\tools\Roslyn472\System.Reflection.Metadata.dll" />
-    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\tools\Roslyn472\System.Runtime.CompilerServices.Unsafe.dll" />
-    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\tools\Roslyn472\System.Text.Encoding.CodePages.dll" />
-    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\tools\Roslyn472\System.Threading.Tasks.Extensions.dll" />
-    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\tools\Roslyn472\vbc.exe" />
-    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\tools\Roslyn472\VBCSCompiler.exe" />
-    <Content Include="packages\Newtonsoft.Json.12.0.2\lib\net20\Newtonsoft.Json.dll" />
-    <Content Include="packages\Newtonsoft.Json.12.0.2\lib\net20\Newtonsoft.Json.xml" />
-    <Content Include="packages\Newtonsoft.Json.12.0.2\lib\net35\Newtonsoft.Json.dll" />
-    <Content Include="packages\Newtonsoft.Json.12.0.2\lib\net35\Newtonsoft.Json.xml" />
-    <Content Include="packages\Newtonsoft.Json.12.0.2\lib\net40\Newtonsoft.Json.dll" />
-    <Content Include="packages\Newtonsoft.Json.12.0.2\lib\net40\Newtonsoft.Json.xml" />
-    <Content Include="packages\Newtonsoft.Json.12.0.2\lib\net45\Newtonsoft.Json.dll" />
-    <Content Include="packages\Newtonsoft.Json.12.0.2\lib\net45\Newtonsoft.Json.xml" />
-    <Content Include="packages\Newtonsoft.Json.12.0.2\lib\netstandard1.0\Newtonsoft.Json.dll" />
-    <Content Include="packages\Newtonsoft.Json.12.0.2\lib\netstandard1.0\Newtonsoft.Json.xml" />
-    <Content Include="packages\Newtonsoft.Json.12.0.2\lib\netstandard1.3\Newtonsoft.Json.dll" />
-    <Content Include="packages\Newtonsoft.Json.12.0.2\lib\netstandard1.3\Newtonsoft.Json.xml" />
-    <Content Include="packages\Newtonsoft.Json.12.0.2\lib\netstandard2.0\Newtonsoft.Json.dll" />
-    <Content Include="packages\Newtonsoft.Json.12.0.2\lib\netstandard2.0\Newtonsoft.Json.xml" />
-    <Content Include="packages\Newtonsoft.Json.12.0.2\lib\portable-net40+sl5+win8+wp8+wpa81\Newtonsoft.Json.dll" />
-    <Content Include="packages\Newtonsoft.Json.12.0.2\lib\portable-net40+sl5+win8+wp8+wpa81\Newtonsoft.Json.xml" />
-    <Content Include="packages\Newtonsoft.Json.12.0.2\lib\portable-net45+win8+wp8+wpa81\Newtonsoft.Json.dll" />
-    <Content Include="packages\Newtonsoft.Json.12.0.2\lib\portable-net45+win8+wp8+wpa81\Newtonsoft.Json.xml" />
-    <Content Include="packages\Newtonsoft.Json.12.0.3\lib\net20\Newtonsoft.Json.dll" />
-    <Content Include="packages\Newtonsoft.Json.12.0.3\lib\net20\Newtonsoft.Json.xml" />
-    <Content Include="packages\Newtonsoft.Json.12.0.3\lib\net35\Newtonsoft.Json.dll" />
-    <Content Include="packages\Newtonsoft.Json.12.0.3\lib\net35\Newtonsoft.Json.xml" />
-    <Content Include="packages\Newtonsoft.Json.12.0.3\lib\net40\Newtonsoft.Json.dll" />
-    <Content Include="packages\Newtonsoft.Json.12.0.3\lib\net40\Newtonsoft.Json.xml" />
-    <Content Include="packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll" />
-    <Content Include="packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.xml" />
-    <Content Include="packages\Newtonsoft.Json.12.0.3\lib\netstandard1.0\Newtonsoft.Json.dll" />
-    <Content Include="packages\Newtonsoft.Json.12.0.3\lib\netstandard1.0\Newtonsoft.Json.xml" />
-    <Content Include="packages\Newtonsoft.Json.12.0.3\lib\netstandard1.3\Newtonsoft.Json.dll" />
-    <Content Include="packages\Newtonsoft.Json.12.0.3\lib\netstandard1.3\Newtonsoft.Json.xml" />
-    <Content Include="packages\Newtonsoft.Json.12.0.3\lib\netstandard2.0\Newtonsoft.Json.dll" />
-    <Content Include="packages\Newtonsoft.Json.12.0.3\lib\netstandard2.0\Newtonsoft.Json.xml" />
-    <Content Include="packages\Newtonsoft.Json.12.0.3\lib\portable-net40+sl5+win8+wp8+wpa81\Newtonsoft.Json.dll" />
-    <Content Include="packages\Newtonsoft.Json.12.0.3\lib\portable-net40+sl5+win8+wp8+wpa81\Newtonsoft.Json.xml" />
-    <Content Include="packages\Newtonsoft.Json.12.0.3\lib\portable-net45+win8+wp8+wpa81\Newtonsoft.Json.dll" />
-    <Content Include="packages\Newtonsoft.Json.12.0.3\lib\portable-net45+win8+wp8+wpa81\Newtonsoft.Json.xml" />
-    <Content Include="packages\Newtonsoft.Json.12.0.3\packageIcon.png" />
-    <Content Include="packages\popper.js.1.16.1\content\Scripts\esm\popper-utils.js" />
-    <Content Include="packages\popper.js.1.16.1\content\Scripts\esm\popper-utils.min.js" />
-    <Content Include="packages\popper.js.1.16.1\content\Scripts\esm\popper.js" />
-    <Content Include="packages\popper.js.1.16.1\content\Scripts\esm\popper.min.js" />
-    <Content Include="packages\popper.js.1.16.1\content\Scripts\popper-utils.js" />
-    <Content Include="packages\popper.js.1.16.1\content\Scripts\popper-utils.min.js" />
-    <Content Include="packages\popper.js.1.16.1\content\Scripts\popper.js" />
-    <Content Include="packages\popper.js.1.16.1\content\Scripts\popper.min.js" />
-    <Content Include="packages\popper.js.1.16.1\content\Scripts\src\index.js" />
-    <Content Include="packages\popper.js.1.16.1\content\Scripts\src\methods\defaults.js" />
-    <Content Include="packages\popper.js.1.16.1\content\Scripts\src\methods\destroy.js" />
-    <Content Include="packages\popper.js.1.16.1\content\Scripts\src\methods\disableEventListeners.js" />
-    <Content Include="packages\popper.js.1.16.1\content\Scripts\src\methods\enableEventListeners.js" />
-    <Content Include="packages\popper.js.1.16.1\content\Scripts\src\methods\placements.js" />
-    <Content Include="packages\popper.js.1.16.1\content\Scripts\src\methods\update.js" />
-    <Content Include="packages\popper.js.1.16.1\content\Scripts\src\modifiers\applyStyle.js" />
-    <Content Include="packages\popper.js.1.16.1\content\Scripts\src\modifiers\arrow.js" />
-    <Content Include="packages\popper.js.1.16.1\content\Scripts\src\modifiers\computeStyle.js" />
-    <Content Include="packages\popper.js.1.16.1\content\Scripts\src\modifiers\flip.js" />
-    <Content Include="packages\popper.js.1.16.1\content\Scripts\src\modifiers\hide.js" />
-    <Content Include="packages\popper.js.1.16.1\content\Scripts\src\modifiers\index.js" />
-    <Content Include="packages\popper.js.1.16.1\content\Scripts\src\modifiers\inner.js" />
-    <Content Include="packages\popper.js.1.16.1\content\Scripts\src\modifiers\keepTogether.js" />
-    <Content Include="packages\popper.js.1.16.1\content\Scripts\src\modifiers\offset.js" />
-    <Content Include="packages\popper.js.1.16.1\content\Scripts\src\modifiers\preventOverflow.js" />
-    <Content Include="packages\popper.js.1.16.1\content\Scripts\src\modifiers\shift.js" />
-    <Content Include="packages\popper.js.1.16.1\content\Scripts\src\utils\clockwise.js" />
-    <Content Include="packages\popper.js.1.16.1\content\Scripts\src\utils\computeAutoPlacement.js" />
-    <Content Include="packages\popper.js.1.16.1\content\Scripts\src\utils\debounce.js" />
-    <Content Include="packages\popper.js.1.16.1\content\Scripts\src\utils\find.js" />
-    <Content Include="packages\popper.js.1.16.1\content\Scripts\src\utils\findCommonOffsetParent.js" />
-    <Content Include="packages\popper.js.1.16.1\content\Scripts\src\utils\findIndex.js" />
-    <Content Include="packages\popper.js.1.16.1\content\Scripts\src\utils\getBordersSize.js" />
-    <Content Include="packages\popper.js.1.16.1\content\Scripts\src\utils\getBoundaries.js" />
-    <Content Include="packages\popper.js.1.16.1\content\Scripts\src\utils\getBoundingClientRect.js" />
-    <Content Include="packages\popper.js.1.16.1\content\Scripts\src\utils\getClientRect.js" />
-    <Content Include="packages\popper.js.1.16.1\content\Scripts\src\utils\getFixedPositionOffsetParent.js" />
-    <Content Include="packages\popper.js.1.16.1\content\Scripts\src\utils\getOffsetParent.js" />
-    <Content Include="packages\popper.js.1.16.1\content\Scripts\src\utils\getOffsetRect.js" />
-    <Content Include="packages\popper.js.1.16.1\content\Scripts\src\utils\getOffsetRectRelativeToArbitraryNode.js" />
-    <Content Include="packages\popper.js.1.16.1\content\Scripts\src\utils\getOppositePlacement.js" />
-    <Content Include="packages\popper.js.1.16.1\content\Scripts\src\utils\getOppositeVariation.js" />
-    <Content Include="packages\popper.js.1.16.1\content\Scripts\src\utils\getOuterSizes.js" />
-    <Content Include="packages\popper.js.1.16.1\content\Scripts\src\utils\getParentNode.js" />
-    <Content Include="packages\popper.js.1.16.1\content\Scripts\src\utils\getPopperOffsets.js" />
-    <Content Include="packages\popper.js.1.16.1\content\Scripts\src\utils\getReferenceNode.js" />
-    <Content Include="packages\popper.js.1.16.1\content\Scripts\src\utils\getReferenceOffsets.js" />
-    <Content Include="packages\popper.js.1.16.1\content\Scripts\src\utils\getRoot.js" />
-    <Content Include="packages\popper.js.1.16.1\content\Scripts\src\utils\getRoundedOffsets.js" />
-    <Content Include="packages\popper.js.1.16.1\content\Scripts\src\utils\getScroll.js" />
-    <Content Include="packages\popper.js.1.16.1\content\Scripts\src\utils\getScrollParent.js" />
-    <Content Include="packages\popper.js.1.16.1\content\Scripts\src\utils\getStyleComputedProperty.js" />
-    <Content Include="packages\popper.js.1.16.1\content\Scripts\src\utils\getSupportedPropertyName.js" />
-    <Content Include="packages\popper.js.1.16.1\content\Scripts\src\utils\getViewportOffsetRectRelativeToArtbitraryNode.js" />
-    <Content Include="packages\popper.js.1.16.1\content\Scripts\src\utils\getWindow.js" />
-    <Content Include="packages\popper.js.1.16.1\content\Scripts\src\utils\getWindowSizes.js" />
-    <Content Include="packages\popper.js.1.16.1\content\Scripts\src\utils\includeScroll.js" />
-    <Content Include="packages\popper.js.1.16.1\content\Scripts\src\utils\index.js" />
-    <Content Include="packages\popper.js.1.16.1\content\Scripts\src\utils\isBrowser.js" />
-    <Content Include="packages\popper.js.1.16.1\content\Scripts\src\utils\isFixed.js" />
-    <Content Include="packages\popper.js.1.16.1\content\Scripts\src\utils\isFunction.js" />
-    <Content Include="packages\popper.js.1.16.1\content\Scripts\src\utils\isIE.js" />
-    <Content Include="packages\popper.js.1.16.1\content\Scripts\src\utils\isModifierEnabled.js" />
-    <Content Include="packages\popper.js.1.16.1\content\Scripts\src\utils\isModifierRequired.js" />
-    <Content Include="packages\popper.js.1.16.1\content\Scripts\src\utils\isNumeric.js" />
-    <Content Include="packages\popper.js.1.16.1\content\Scripts\src\utils\isOffsetContainer.js" />
-    <Content Include="packages\popper.js.1.16.1\content\Scripts\src\utils\removeEventListeners.js" />
-    <Content Include="packages\popper.js.1.16.1\content\Scripts\src\utils\runModifiers.js" />
-    <Content Include="packages\popper.js.1.16.1\content\Scripts\src\utils\setAttributes.js" />
-    <Content Include="packages\popper.js.1.16.1\content\Scripts\src\utils\setStyles.js" />
-    <Content Include="packages\popper.js.1.16.1\content\Scripts\src\utils\setupEventListeners.js" />
-    <Content Include="packages\popper.js.1.16.1\content\Scripts\umd\popper-utils.js" />
-    <Content Include="packages\popper.js.1.16.1\content\Scripts\umd\popper-utils.min.js" />
-    <Content Include="packages\popper.js.1.16.1\content\Scripts\umd\popper.js" />
-    <Content Include="packages\popper.js.1.16.1\content\Scripts\umd\popper.min.js" />
-    <Content Include="Content\bootstrap.min.css.map" />
-    <Content Include="Content\bootstrap.css.map" />
-    <Content Include="Content\bootstrap-reboot.min.css.map" />
-    <Content Include="Content\bootstrap-reboot.css.map" />
-    <Content Include="Content\bootstrap-grid.min.css.map" />
-    <Content Include="Content\bootstrap-grid.css.map" />
-    <Content Include="packages\bootstrap.3.4.1\.signature.p7s" />
-    <Content Include="packages\bootstrap.3.4.1\bootstrap.3.4.1.nupkg" />
-    <Content Include="packages\bootstrap.3.4.1\contentFiles\Content\bootstrap-theme.css.map" />
-    <Content Include="packages\bootstrap.3.4.1\contentFiles\Content\bootstrap-theme.min.css.map" />
-    <Content Include="packages\bootstrap.3.4.1\contentFiles\Content\bootstrap.css.map" />
-    <Content Include="packages\bootstrap.3.4.1\contentFiles\Content\bootstrap.min.css.map" />
-    <Content Include="packages\bootstrap.3.4.1\contentFiles\fonts\glyphicons-halflings-regular.eot" />
-    <Content Include="packages\bootstrap.3.4.1\contentFiles\fonts\glyphicons-halflings-regular.ttf" />
-    <Content Include="packages\bootstrap.3.4.1\contentFiles\fonts\glyphicons-halflings-regular.woff" />
-    <Content Include="packages\bootstrap.3.4.1\contentFiles\fonts\glyphicons-halflings-regular.woff2" />
-    <Content Include="packages\bootstrap.3.4.1\content\Content\bootstrap-theme.css.map" />
-    <Content Include="packages\bootstrap.3.4.1\content\Content\bootstrap-theme.min.css.map" />
-    <Content Include="packages\bootstrap.3.4.1\content\Content\bootstrap.css.map" />
-    <Content Include="packages\bootstrap.3.4.1\content\Content\bootstrap.min.css.map" />
-    <Content Include="packages\bootstrap.3.4.1\content\fonts\glyphicons-halflings-regular.eot" />
-    <Content Include="packages\bootstrap.3.4.1\content\fonts\glyphicons-halflings-regular.ttf" />
-    <Content Include="packages\bootstrap.3.4.1\content\fonts\glyphicons-halflings-regular.woff" />
-    <Content Include="packages\bootstrap.3.4.1\content\fonts\glyphicons-halflings-regular.woff2" />
-    <Content Include="packages\bootstrap.4.5.2\.signature.p7s" />
-    <Content Include="packages\bootstrap.4.5.2\bootstrap.4.5.2.nupkg" />
-    <Content Include="packages\bootstrap.4.5.2\contentFiles\any\any\wwwroot\css\bootstrap-grid.css.map" />
-    <Content Include="packages\bootstrap.4.5.2\contentFiles\any\any\wwwroot\css\bootstrap-grid.min.css.map" />
-    <Content Include="packages\bootstrap.4.5.2\contentFiles\any\any\wwwroot\css\bootstrap-reboot.css.map" />
-    <Content Include="packages\bootstrap.4.5.2\contentFiles\any\any\wwwroot\css\bootstrap-reboot.min.css.map" />
-    <Content Include="packages\bootstrap.4.5.2\contentFiles\any\any\wwwroot\css\bootstrap.css.map" />
-    <Content Include="packages\bootstrap.4.5.2\contentFiles\any\any\wwwroot\css\bootstrap.min.css.map" />
-    <Content Include="packages\bootstrap.4.5.2\contentFiles\any\any\wwwroot\js\bootstrap.bundle.js.map" />
-    <Content Include="packages\bootstrap.4.5.2\contentFiles\any\any\wwwroot\js\bootstrap.bundle.min.js.map" />
-    <Content Include="packages\bootstrap.4.5.2\contentFiles\any\any\wwwroot\js\bootstrap.js.map" />
-    <Content Include="packages\bootstrap.4.5.2\contentFiles\any\any\wwwroot\js\bootstrap.min.js.map" />
-    <Content Include="packages\bootstrap.4.5.2\content\Content\bootstrap-grid.css.map" />
-    <Content Include="packages\bootstrap.4.5.2\content\Content\bootstrap-grid.min.css.map" />
-    <Content Include="packages\bootstrap.4.5.2\content\Content\bootstrap-reboot.css.map" />
-    <Content Include="packages\bootstrap.4.5.2\content\Content\bootstrap-reboot.min.css.map" />
-    <Content Include="packages\bootstrap.4.5.2\content\Content\bootstrap.css.map" />
-    <Content Include="packages\bootstrap.4.5.2\content\Content\bootstrap.min.css.map" />
-    <Content Include="packages\bootstrap.4.5.2\content\Scripts\bootstrap.bundle.js.map" />
-    <Content Include="packages\bootstrap.4.5.2\content\Scripts\bootstrap.bundle.min.js.map" />
-    <Content Include="packages\bootstrap.4.5.2\content\Scripts\bootstrap.js.map" />
-    <Content Include="packages\bootstrap.4.5.2\content\Scripts\bootstrap.min.js.map" />
-    <Content Include="packages\jQuery.3.4.1\.signature.p7s" />
-    <Content Include="packages\jQuery.3.4.1\Content\Scripts\jquery-3.4.1.min.map" />
-    <Content Include="packages\jQuery.3.4.1\Content\Scripts\jquery-3.4.1.slim.min.map" />
-    <Content Include="packages\jQuery.3.4.1\jQuery.3.4.1.nupkg" />
-    <Content Include="packages\jQuery.3.4.1\Tools\common.ps1" />
-    <Content Include="packages\jQuery.3.4.1\Tools\install.ps1" />
-    <Content Include="packages\jQuery.3.4.1\Tools\uninstall.ps1" />
-    <Content Include="packages\jQuery.3.5.1\.signature.p7s" />
-    <Content Include="packages\jQuery.3.5.1\Content\Scripts\jquery-3.5.1.min.map" />
-    <Content Include="packages\jQuery.3.5.1\Content\Scripts\jquery-3.5.1.slim.min.map" />
-    <Content Include="packages\jQuery.3.5.1\jQuery.3.5.1.nupkg" />
-    <Content Include="packages\jQuery.3.5.1\Tools\common.ps1" />
-    <Content Include="packages\jQuery.3.5.1\Tools\install.ps1" />
-    <Content Include="packages\jQuery.3.5.1\Tools\uninstall.ps1" />
-    <Content Include="packages\jQuery.Validation.1.17.0\.signature.p7s" />
-    <Content Include="packages\jQuery.Validation.1.17.0\jQuery.Validation.1.17.0.nupkg" />
-    <Content Include="packages\jQuery.Validation.1.19.1\.signature.p7s" />
-    <Content Include="packages\jQuery.Validation.1.19.1\jQuery.Validation.1.19.1.nupkg" />
-    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\.signature.p7s" />
-    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.Extensions.props" />
-    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" />
-    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.Extensions.props" />
-    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" />
-    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\content\net45\app.config.install.xdt" />
-    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\content\net45\app.config.uninstall.xdt" />
-    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\content\net45\web.config.install.xdt" />
-    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\content\net45\web.config.uninstall.xdt" />
-    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\content\net46\app.config.install.xdt" />
-    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\content\net46\app.config.uninstall.xdt" />
-    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\content\net46\web.config.install.xdt" />
-    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\content\net46\web.config.uninstall.xdt" />
-    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1.nupkg" />
-    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\net45\install.ps1" />
-    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\net45\uninstall.ps1" />
-    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\Roslyn45\csc.exe.config" />
-    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\Roslyn45\csc.rsp" />
-    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\Roslyn45\csi.rsp" />
-    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\Roslyn45\Microsoft.CSharp.Core.targets" />
-    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\Roslyn45\Microsoft.VisualBasic.Core.targets" />
-    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\Roslyn45\vbc.exe.config" />
-    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\Roslyn45\vbc.rsp" />
-    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\Roslyn45\VBCSCompiler.exe.config" />
-    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\csc.exe.config" />
-    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\csc.rsp" />
-    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\csi.exe.config" />
-    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\csi.rsp" />
-    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\Microsoft.CSharp.Core.targets" />
-    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\Microsoft.Managed.Core.targets" />
-    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\Microsoft.VisualBasic.Core.targets" />
-    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\vbc.exe.config" />
-    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\vbc.rsp" />
-    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\VBCSCompiler.exe.config" />
-    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\.signature.p7s" />
-    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.Extensions.targets" />
-    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.targets" />
-    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.Extensions.targets" />
-    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.targets" />
-    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\build\net472\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.Extensions.targets" />
-    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\build\net472\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.targets" />
-    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\content\net45\app.config.install.xdt" />
-    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\content\net45\app.config.uninstall.xdt" />
-    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\content\net45\web.config.install.xdt" />
-    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\content\net45\web.config.uninstall.xdt" />
-    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\content\net46\app.config.install.xdt" />
-    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\content\net46\app.config.uninstall.xdt" />
-    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\content\net46\web.config.install.xdt" />
-    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\content\net46\web.config.uninstall.xdt" />
-    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\content\net472\app.config.install.xdt" />
-    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\content\net472\app.config.uninstall.xdt" />
-    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\content\net472\web.config.install.xdt" />
-    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\content\net472\web.config.uninstall.xdt" />
-    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0.nupkg" />
-    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\tools\net45\common.ps1" />
-    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\tools\net45\install.ps1" />
-    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\tools\net45\uninstall.ps1" />
-    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\tools\Roslyn45\csc.exe.config" />
-    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\tools\Roslyn45\csc.rsp" />
-    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\tools\Roslyn45\csi.rsp" />
-    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\tools\Roslyn45\Microsoft.CSharp.Core.targets" />
-    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\tools\Roslyn45\Microsoft.VisualBasic.Core.targets" />
-    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\tools\Roslyn45\vbc.exe.config" />
-    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\tools\Roslyn45\vbc.rsp" />
-    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\tools\Roslyn45\VBCSCompiler.exe.config" />
-    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\tools\Roslyn46\csc.exe.config" />
-    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\tools\Roslyn46\csc.rsp" />
-    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\tools\Roslyn46\csi.exe.config" />
-    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\tools\Roslyn46\csi.rsp" />
-    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\tools\Roslyn46\Microsoft.CSharp.Core.targets" />
-    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\tools\Roslyn46\Microsoft.Managed.Core.targets" />
-    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\tools\Roslyn46\Microsoft.VisualBasic.Core.targets" />
-    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\tools\Roslyn46\vbc.exe.config" />
-    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\tools\Roslyn46\vbc.rsp" />
-    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\tools\Roslyn46\VBCSCompiler.exe.config" />
-    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\tools\Roslyn472\csc.exe.config" />
-    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\tools\Roslyn472\csc.rsp" />
-    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\tools\Roslyn472\csi.exe.config" />
-    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\tools\Roslyn472\csi.rsp" />
-    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\tools\Roslyn472\Microsoft.CSharp.Core.targets" />
-    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\tools\Roslyn472\Microsoft.Managed.Core.targets" />
-    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\tools\Roslyn472\Microsoft.VisualBasic.Core.targets" />
-    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\tools\Roslyn472\vbc.exe.config" />
-    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\tools\Roslyn472\vbc.rsp" />
-    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\tools\Roslyn472\VBCSCompiler.exe.config" />
-    <Content Include="packages\Newtonsoft.Json.12.0.2\.signature.p7s" />
-    <Content Include="packages\Newtonsoft.Json.12.0.2\LICENSE.md" />
-    <Content Include="packages\Newtonsoft.Json.12.0.2\Newtonsoft.Json.12.0.2.nupkg" />
-    <Content Include="packages\Newtonsoft.Json.12.0.3\.signature.p7s" />
-    <Content Include="packages\Newtonsoft.Json.12.0.3\LICENSE.md" />
-    <Content Include="packages\Newtonsoft.Json.12.0.3\Newtonsoft.Json.12.0.3.nupkg" />
-    <Content Include="packages\popper.js.1.16.1\.signature.p7s" />
-    <Content Include="packages\popper.js.1.16.1\content\Scripts\esm\popper-utils.js.map" />
-    <Content Include="packages\popper.js.1.16.1\content\Scripts\esm\popper-utils.min.js.map" />
-    <Content Include="packages\popper.js.1.16.1\content\Scripts\esm\popper.js.map" />
-    <Content Include="packages\popper.js.1.16.1\content\Scripts\esm\popper.min.js.map" />
-    <Content Include="packages\popper.js.1.16.1\content\Scripts\index.js.flow" />
-    <Content Include="packages\popper.js.1.16.1\content\Scripts\popper-utils.js.map" />
-    <Content Include="packages\popper.js.1.16.1\content\Scripts\popper-utils.min.js.map" />
-    <Content Include="packages\popper.js.1.16.1\content\Scripts\popper.js.map" />
-    <Content Include="packages\popper.js.1.16.1\content\Scripts\popper.min.js.map" />
-    <Content Include="packages\popper.js.1.16.1\content\Scripts\README.md" />
-    <Content Include="packages\popper.js.1.16.1\content\Scripts\umd\popper-utils.js.map" />
-    <Content Include="packages\popper.js.1.16.1\content\Scripts\umd\popper-utils.min.js.map" />
-    <Content Include="packages\popper.js.1.16.1\content\Scripts\umd\popper.js.flow" />
-    <Content Include="packages\popper.js.1.16.1\content\Scripts\umd\popper.js.map" />
-    <Content Include="packages\popper.js.1.16.1\content\Scripts\umd\popper.min.js.map" />
-    <Content Include="packages\popper.js.1.16.1\popper.js.1.16.1.nupkg" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
@@ -713,18 +226,7 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\Pontos\Create.cshtml" />
-    <Content Include="Views\Pontos\Delete.cshtml" />
-    <Content Include="Views\Pontos\Details.cshtml" />
-    <Content Include="Views\Pontos\Edit.cshtml" />
-    <Content Include="Views\Pontos\Index.cshtml" />
-    <Content Include="Views\Doacoes\Create.cshtml" />
-    <Content Include="Views\Doacoes\Delete.cshtml" />
-    <Content Include="Views\Doacoes\Details.cshtml" />
-    <Content Include="Views\Doacoes\Edit.cshtml" />
-    <Content Include="Views\Doacoes\Index.cshtml" />
-    <Content Include="Scripts\jquery-3.4.1.min.map" />
-    <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
+    <Content Include="Views\Account\_ExternalLoginsListPartial.cshtml" />
     <Content Include="Views\Account\ConfirmEmail.cshtml" />
     <Content Include="Views\Account\ExternalLoginConfirmation.cshtml" />
     <Content Include="Views\Account\ExternalLoginFailure.cshtml" />
@@ -736,7 +238,6 @@
     <Content Include="Views\Account\ResetPasswordConfirmation.cshtml" />
     <Content Include="Views\Account\SendCode.cshtml" />
     <Content Include="Views\Account\VerifyCode.cshtml" />
-    <Content Include="Views\Account\_ExternalLoginsListPartial.cshtml" />
     <Content Include="Views\Manage\AddPhoneNumber.cshtml" />
     <Content Include="Views\Manage\ChangePassword.cshtml" />
     <Content Include="Views\Manage\Index.cshtml" />
@@ -745,58 +246,43 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Doacoes\Create.cshtml" />
+    <Content Include="Views\Doacoes\Delete.cshtml" />
+    <Content Include="Views\Doacoes\Details.cshtml" />
+    <Content Include="Views\Doacoes\Edit.cshtml" />
+    <Content Include="Views\Doacoes\Index.cshtml" />
+    <Content Include="Views\Pontos\Create.cshtml" />
+    <Content Include="Views\Pontos\Delete.cshtml" />
+    <Content Include="Views\Pontos\Details.cshtml" />
+    <Content Include="Views\Pontos\Edit.cshtml" />
+    <Content Include="Views\Pontos\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="packages\Antlr.3.5.0.2\lib\" />
-    <Folder Include="packages\EntityFramework.6.4.4\buildTransitive\netcoreapp3.0\" />
-    <Folder Include="packages\EntityFramework.6.4.4\build\netcoreapp3.0\" />
-    <Folder Include="packages\EntityFramework.6.4.4\content\net40\" />
-    <Folder Include="packages\EntityFramework.6.4.4\lib\net40\" />
-    <Folder Include="packages\EntityFramework.6.4.4\lib\net45\" />
-    <Folder Include="packages\EntityFramework.6.4.4\lib\netstandard2.1\" />
-    <Folder Include="packages\EntityFramework.6.4.4\tools\net40\any\" />
-    <Folder Include="packages\EntityFramework.6.4.4\tools\net40\win-x86\" />
-    <Folder Include="packages\EntityFramework.6.4.4\tools\net45\any\" />
-    <Folder Include="packages\EntityFramework.6.4.4\tools\net45\win-x86\" />
-    <Folder Include="packages\EntityFramework.6.4.4\tools\netcoreapp3.0\any\" />
-    <Folder Include="packages\Microsoft.AspNet.Mvc.5.2.7\Content\" />
-    <Folder Include="packages\Microsoft.AspNet.Mvc.5.2.7\lib\net45\pt-br\" />
-    <Folder Include="packages\Microsoft.AspNet.Mvc.pt-br.5.2.7\lib\net45\pt-br\" />
-    <Folder Include="packages\Microsoft.AspNet.Razor.3.2.7\lib\net45\pt-br\" />
-    <Folder Include="packages\Microsoft.AspNet.Razor.pt-br.3.2.7\lib\net45\pt-br\" />
-    <Folder Include="packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\pt-br\" />
-    <Folder Include="packages\Microsoft.AspNet.Web.Optimization.pt-br.1.1.3\lib\net40\pt-br\" />
-    <Folder Include="packages\Microsoft.AspNet.WebPages.3.2.7\Content\" />
-    <Folder Include="packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\pt-br\" />
-    <Folder Include="packages\Microsoft.AspNet.WebPages.pt-br.3.2.7\lib\net45\pt-br\" />
-    <Folder Include="packages\Microsoft.jQuery.Unobtrusive.Validation.3.2.11\Content\Scripts\" />
-    <Folder Include="packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\" />
-    <Folder Include="packages\Modernizr.2.8.3\Content\Scripts\" />
-    <Folder Include="packages\Modernizr.2.8.3\Tools\" />
-    <Folder Include="packages\WebGrease.1.6.0\lib\" />
-    <Folder Include="packages\WebGrease.1.6.0\tools\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap-theme.min.css.map" />
+    <Content Include="Content\bootstrap-theme.css.map" />
     <None Include="packages.config" />
+    <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
+    <Content Include="Scripts\jquery-3.4.1.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202008130649214_initial.resx">
-      <DependentUpon>202008130649214_initial.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202008140712373_InitialCreate.resx">
+      <DependentUpon>202008140712373_InitialCreate.cs</DependentUpon>
     </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <TypeScriptCompile Include="packages\popper.js.1.16.1\content\Scripts\index.d.ts" />
-  </ItemGroup>
-  <ItemGroup>
-    <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
   </PropertyGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
-  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets')" />
   <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
   <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
@@ -808,9 +294,9 @@
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>57066</DevelopmentServerPort>
+          <DevelopmentServerPort>61434</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>https://localhost:44391/</IISUrl>
+          <IISUrl>https://localhost:44399/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>
@@ -824,9 +310,8 @@
     <PropertyGroup>
       <ErrorText>Este projeto faz referência a pacotes do NuGet que não estão presentes neste computador. Use a Restauração de Pacotes do NuGet para baixá-los.  Para obter mais informações, consulte http://go.microsoft.com/fwlink/?LinkID=322105. O arquivo ausente é {0}.</ErrorText>
     </PropertyGroup>
-    <Error Condition="!Exists('packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\build\net472\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\build\net472\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.targets'))" />
+    <Error Condition="!Exists('packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
   </Target>
-  <Import Project="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\build\net472\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.targets" Condition="Exists('packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\build\net472\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.targets')" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">
