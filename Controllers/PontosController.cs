@@ -18,6 +18,7 @@ namespace PontoDeAjuda.Controllers
         private PontoContext db = new PontoContext();
 
         // GET: Pontos
+        [Authorize(Roles = "Admin")]
         public ActionResult Index()
         {
             var pontos = db.Pontos.Include(c => c.Doacoes);
@@ -32,6 +33,8 @@ namespace PontoDeAjuda.Controllers
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
             Ponto ponto = db.Pontos.Find(id);
+            ponto.Doacoes = new List<Doacao>();
+            PopulateAssignedDoacaoData(ponto);
             if (ponto == null)
             {
                 return HttpNotFound();

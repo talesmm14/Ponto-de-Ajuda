@@ -62,16 +62,20 @@
                 <tr>
                     <th>icone</th>
                 </tr>
-                @foreach (var doacao in Model.Doacoes)
-                {
-                    <tr>
-                        <td>
-                            @Html.DisplayFor(modelItem => doacao.Nome)
-                        </td>
-                        <td>
-                            <i class="@Html.DisplayFor(modelItem => doacao.icon)"></i>
-                        </td>
-                    </tr>
+                @{
+                    int cnt = 0;
+
+                    foreach (var doacao in Model.Doacoes)
+                    {
+                        <tr>
+                            <td>
+                                @doacao.Nome
+                            </td>
+                            <td>
+                                <i class="@doacao.icon"></i>
+                            </td>
+                        </tr>
+                    }
                 }
             </table>
         </dd>
