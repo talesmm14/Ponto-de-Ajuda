@@ -1,17 +1,45 @@
 ﻿@{
     ViewBag.Title = "Contact";
 }
-<h2>@ViewBag.Title.</h2>
-<h3>@ViewBag.Message</h3>
 
-<address>
-    One Microsoft Way<br />
-    Redmond, WA 98052-6399<br />
-    <abbr title="Phone">P:</abbr>
-    425.555.0100
-</address>
-
-<address>
-    <strong>Support:</strong>   <a href="mailto:Support@example.com">Support@example.com</a><br />
-    <strong>Marketing:</strong> <a href="mailto:Marketing@example.com">Marketing@example.com</a>
-</address>
+<div class="content-block contact-3">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div id="contact" class="form-container">
+                    <fieldset>
+                        <div id="message"></div>
+                        <form method="post" action="js/contact-form.php" name="contactform" id="contactform">
+                            <div class="form-group">
+                                <input name="name" id="name" type="text" value="" placeholder="Nome" class="form-control" />
+                            </div>
+                            <div class="form-group">
+                                <input name="email" id="email" type="text" value="" placeholder="Email" class="form-control" />
+                            </div>
+                            <div class="form-group">
+                                <input name="phone" id="phone" type="text" value="" placeholder="Telefone" class="form-control" />
+                            </div>
+                            <div class="form-group">
+                                <textarea name="comments" id="comments" class="form-control" rows="3" placeholder="Mensagem" id="textArea"></textarea>
+                                <div class="editContent">
+                                    <p class="small text-muted"><span class="guardsman">* Todos os campos são necessários.</span> Iremos responder assim que possível.</p>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <button class="btn btn-primary" type="submit" id="cf-submit" name="submit">Enviar</button>
+                            </div>
+                        </form>
+                    </fieldset>
+                </div>
+                <!-- /.form-container -->
+            </div>
+            <div class="col-md-6">
+                <h2>Como nos encontrar</h2>
+                <p>Como dito anteriormente somos acadêmicos de Sistemas de Informação na Universidade do Tocantins. Podendo nos encontrar no período matutino na própria universidade.</p>
+                <img class="img-responsive map-img" src="~/assets/img/unitins.jpg">
+            </div>
+        </div>
+        <!-- /.row -->
+    </div>
+    <!-- /.container -->
+</div>
