@@ -1,90 +1,100 @@
 ﻿@model PontoDeAjuda.Ponto
 
-@{ ViewBag.Title = "Create"; }
+@{
+    ViewBag.Nome = "Edit";
+}
+
+<h2>Edit</h2>
 
 
 @using (Html.BeginForm())
 {
-@Html.AntiForgeryToken()
+    @Html.AntiForgeryToken()
 
-                <div class="content-block contact-3">
-                    <div class="">
-                        <div class="row">
-                            <div class="col-md-8 col-lg-4 col-lg-offset-4 col-md-offset-2">
-                                <div class="page-header text-primary text-center">
-                                    <h1>Editar</h1>
-                                </div>
-                                <div id="contact" class="form-container">
-                                    <fieldset>
-                                        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-                                        @Html.HiddenFor(model => model.PontoID)
-                                        <div id="message"></div>
-                                        <form method="post" action="js/contact-form.php" name="contactform" id="contactform">
-                                            <div class="form-group ">
-                                                @Html.LabelFor(model => model.Nome, htmlAttributes: new { @class = "control-label col-md-2" })
-                                                @Html.EditorFor(model => model.Nome, new { htmlAttributes = new { @class = "form-control" } })
-                                                @Html.ValidationMessageFor(model => model.Nome, "", new { @class = "text-danger" })
-                                            </div>
-                                            <div class="form-group">
-                                                @Html.LabelFor(model => model.Descricao, htmlAttributes: new { @class = "control-label col-md-2" })
-                                                @Html.EditorFor(model => model.Descricao, new { htmlAttributes = new { @class = "form-control" } })
-                                                @Html.ValidationMessageFor(model => model.Descricao, "", new { @class = "text-danger" })
-                                            </div>
-                                            <div class="form-group">
-                                                @Html.LabelFor(model => model.Endereco, htmlAttributes: new { @class = "control-label col-md-2" })
-                                                @Html.EditorFor(model => model.Endereco, new { htmlAttributes = new { @class = "form-control" } })
-                                                @Html.ValidationMessageFor(model => model.Endereco, "", new { @class = "text-danger" })
-                                            </div>
-                                            <div class="form-group">
-                                                @Html.LabelFor(model => model.Telefone, htmlAttributes: new { @class = "control-label col-md-2" })
-                                                @Html.EditorFor(model => model.Telefone, new { htmlAttributes = new { @class = "form-control" } })
-                                                @Html.ValidationMessageFor(model => model.Telefone, "", new { @class = "text-danger" })
-                                            </div>
-                                            <div class="form-group">
-                                                @Html.LabelFor(model => model.DataFinal, htmlAttributes: new { @class = "control-label col-md-2" })
-                                                @Html.EditorFor(model => model.DataFinal, new { htmlAttributes = new { @class = "form-control" } })
-                                                @Html.ValidationMessageFor(model => model.DataFinal, "", new { @class = "text-danger" })
-                                            </div>
-                                            <div class="form-group">
-                                                <div class="col-md-offset-2 col-md-10">
-                                                    <table>
-                                                        <tr>
-                                                            @{ int cnt = 0;
-                                                                List<PontoDeAjuda.Models.AssignedDoacaoData> doacoes = ViewBag.Doacoes;
+    <div class="form-horizontal">
+        <h4>Ponto</h4>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        @Html.HiddenFor(model => model.PontoID)
 
-                                                                foreach (var doacao in doacoes)
-                                                                {
-                                                                    if (cnt++ % 3 == 0)
-                                                                    {
-                                            @:</tr><tr>
-                                            }
-                                    @:<td>
-                                        <input type="checkbox"
-                                               name="selectedDoacoes"
-                                               value="@doacao.DoacaoID"
-                                               @(Html.Raw(doacao.Assigned ? "checked=\"checked\"" : "")) />
-                                                            @doacao.Nome @:  @doacao.icon
-                                                        @:</td>
-                                                    }
-                                    @:</tr>
-                                                            }
-                                                        </table>
-                                                    </div>
-                                                </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.Nome, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Nome, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Nome, "", new { @class = "text-danger" })
+            </div>
+        </div>
 
-                                                <div class="form-group">
-                                                    <button class="btn btn-success" type="submit" id="cf-submit" name="submit">Criar</button>
-                                                </div>
-                                                <a href="@Url.Action("Create", "Index")">Ver ponto de Ajuda</a>
+        <div class="form-group">
+            @Html.LabelFor(model => model.Descricao, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Descricao, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Descricao, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Endereco, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Endereco, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Endereco, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Telefone, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Telefone, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Telefone, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.DataFinal, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.DataFinal, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.DataFinal, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <table>
+                    <tr>
+                        @{
+                            int cnt = 0;
+                            List<PontoDeAjuda.Models.AssignedDoacaoData> doacoes = ViewBag.Doacoes;
+
+                            foreach (var doacao in doacoes)
+                            {
+                                if (cnt++ % 3 == 0)
+                                {
+                                    @:</tr><tr>
+                                }
+                                @:<td>
+                                    <input type="checkbox"
+                                           name="selectedDoacoes"
+                                           value="@doacao.DoacaoID"
+                                           @(Html.Raw(doacao.Assigned ? "checked=\"checked\"" : "")) />
+                                    @doacao.Nome @:  <i class="@doacao.icon"></i> <br />
+                                @:</td>
+                            }
+                        @:</tr>
+                        }
+                    </table>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-10">
+                    <input type="submit" value="Save" class="btn btn-default" />
+                </div>
+            </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
 </div>
 
-                                    <!-- /.form-container -->
-                                </div>
-                            </div>
-                            <!-- /.row -->
-                        </div>
-                        <!-- /.container -->
-                    </div>}
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")
 }
