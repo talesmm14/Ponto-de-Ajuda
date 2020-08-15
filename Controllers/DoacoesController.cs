@@ -16,12 +16,14 @@ namespace PontoDeAjuda.Controllers
         private PontoContext db = new PontoContext();
 
         // GET: Doacoes
+        [Authorize(Roles = "Admin")]
         public ActionResult Index()
         {
             return View(db.Doacoes.ToList());
         }
 
         // GET: Doacoes/Details/5
+        [Authorize(Roles = "Admin")]
         public ActionResult Details(int? id)
         {
             if (id == null)
@@ -37,6 +39,7 @@ namespace PontoDeAjuda.Controllers
         }
 
         // GET: Doacoes/Create
+        [Authorize(Roles = "Admin")]
         public ActionResult Create()
         {
             return View();
@@ -47,6 +50,7 @@ namespace PontoDeAjuda.Controllers
         // Para obter mais detalhes, confira https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Admin")]
         public ActionResult Create([Bind(Include = "DoacaoID,Nome,icon")] Doacao doacao)
         {
             if (ModelState.IsValid)
@@ -60,6 +64,7 @@ namespace PontoDeAjuda.Controllers
         }
 
         // GET: Doacoes/Edit/5
+        [Authorize(Roles = "Admin")]
         public ActionResult Edit(int? id)
         {
             if (id == null)
@@ -79,6 +84,7 @@ namespace PontoDeAjuda.Controllers
         // Para obter mais detalhes, confira https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Admin")]
         public ActionResult Edit([Bind(Include = "DoacaoID,Nome,icon")] Doacao doacao)
         {
             if (ModelState.IsValid)
@@ -91,6 +97,7 @@ namespace PontoDeAjuda.Controllers
         }
 
         // GET: Doacoes/Delete/5
+        [Authorize(Roles = "Admin")]
         public ActionResult Delete(int? id)
         {
             if (id == null)
@@ -108,6 +115,7 @@ namespace PontoDeAjuda.Controllers
         // POST: Doacoes/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Admin")]
         public ActionResult DeleteConfirmed(int id)
         {
             Doacao doacao = db.Doacoes.Find(id);

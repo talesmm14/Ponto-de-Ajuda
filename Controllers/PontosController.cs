@@ -16,9 +16,11 @@ namespace PontoDeAjuda.Controllers
     public class PontosController : Controller
     {
         private PontoContext db = new PontoContext();
-
         // GET: Pontos
+<<<<<<< HEAD
        
+=======
+>>>>>>> master
         public ActionResult Index()
         {
             var pontos = db.Pontos.Include(c => c.Doacoes);
@@ -78,6 +80,7 @@ namespace PontoDeAjuda.Controllers
         }
 
         // GET: Pontos/Edit/5
+        [Authorize(Roles = "Admin")]
         public ActionResult Edit(int? id)
         {
             if (id == null)
@@ -116,6 +119,7 @@ namespace PontoDeAjuda.Controllers
         // Para obter mais detalhes, confira https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Admin")]
         public ActionResult Edit(int? id, string[] selectedDoacoes)
         {
             if (id == null)
@@ -178,6 +182,7 @@ namespace PontoDeAjuda.Controllers
             }
         }
         // GET: Pontos/Delete/5
+        [Authorize(Roles = "Admin")]
         public ActionResult Delete(int? id)
         {
             if (id == null)

@@ -66,9 +66,12 @@ E:\Documentos\VisualStudio\source\repos\Pontodeajuda\bin\Microsoft.Owin.Security
 E:\Documentos\VisualStudio\source\repos\Pontodeajuda\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
 E:\Documentos\VisualStudio\source\repos\Pontodeajuda\bin\Microsoft.Owin.Security.OAuth.dll
 E:\Documentos\VisualStudio\source\repos\Pontodeajuda\bin\Microsoft.Owin.Security.Twitter.dll
+E:\Documentos\VisualStudio\source\repos\Pontodeajuda\bin\Microsoft.PowerBI.Api.dll
+E:\Documentos\VisualStudio\source\repos\Pontodeajuda\bin\Microsoft.Rest.ClientRuntime.dll
 E:\Documentos\VisualStudio\source\repos\Pontodeajuda\bin\Microsoft.Web.Infrastructure.dll
 E:\Documentos\VisualStudio\source\repos\Pontodeajuda\bin\Newtonsoft.Json.dll
 E:\Documentos\VisualStudio\source\repos\Pontodeajuda\bin\Owin.dll
+E:\Documentos\VisualStudio\source\repos\Pontodeajuda\bin\System.Security.Cryptography.Cng.dll
 E:\Documentos\VisualStudio\source\repos\Pontodeajuda\bin\System.Web.Helpers.dll
 E:\Documentos\VisualStudio\source\repos\Pontodeajuda\bin\System.Web.Mvc.dll
 E:\Documentos\VisualStudio\source\repos\Pontodeajuda\bin\System.Web.Optimization.dll
@@ -77,6 +80,7 @@ E:\Documentos\VisualStudio\source\repos\Pontodeajuda\bin\System.Web.WebPages.Dep
 E:\Documentos\VisualStudio\source\repos\Pontodeajuda\bin\System.Web.WebPages.dll
 E:\Documentos\VisualStudio\source\repos\Pontodeajuda\bin\System.Web.WebPages.Razor.dll
 E:\Documentos\VisualStudio\source\repos\Pontodeajuda\bin\WebGrease.dll
+E:\Documentos\VisualStudio\source\repos\Pontodeajuda\bin\System.Security.Cryptography.Cng.xml
 E:\Documentos\VisualStudio\source\repos\Pontodeajuda\bin\System.Web.Helpers.xml
 E:\Documentos\VisualStudio\source\repos\Pontodeajuda\bin\System.Web.Mvc.xml
 E:\Documentos\VisualStudio\source\repos\Pontodeajuda\bin\System.Web.Optimization.xml
@@ -118,13 +122,13 @@ E:\Documentos\VisualStudio\source\repos\Pontodeajuda\bin\pt-br\Microsoft.Owin.Se
 E:\Documentos\VisualStudio\source\repos\Pontodeajuda\bin\pt-br\Microsoft.Owin.Security.Google.resources.dll
 E:\Documentos\VisualStudio\source\repos\Pontodeajuda\bin\pt-br\Microsoft.Owin.Security.Twitter.resources.dll
 E:\Documentos\VisualStudio\source\repos\Pontodeajuda\bin\pt-br\Microsoft.Owin.Security.MicrosoftAccount.resources.dll
-E:\Documentos\VisualStudio\source\repos\Pontodeajuda\obj\Debug\PontoDeAjuda.csprojAssemblyReference.cache
 E:\Documentos\VisualStudio\source\repos\Pontodeajuda\obj\Debug\PontoDeAjuda.Migrations.InitialCreate.resources
 E:\Documentos\VisualStudio\source\repos\Pontodeajuda\obj\Debug\PontoDeAjuda.csproj.GenerateResource.cache
 E:\Documentos\VisualStudio\source\repos\Pontodeajuda\obj\Debug\PontoDeAjuda.csproj.CoreCompileInputs.cache
 E:\Documentos\VisualStudio\source\repos\Pontodeajuda\obj\Debug\PontoDeAjuda.csproj.CopyComplete
 E:\Documentos\VisualStudio\source\repos\Pontodeajuda\obj\Debug\PontoDeAjuda.dll
 E:\Documentos\VisualStudio\source\repos\Pontodeajuda\obj\Debug\PontoDeAjuda.pdb
+<<<<<<< HEAD
 E:\Documentos\VisualStudio\source\repos\Pontodeajuda\bin\Microsoft.PowerBI.Api.dll
 E:\Documentos\VisualStudio\source\repos\Pontodeajuda\bin\Microsoft.Rest.ClientRuntime.dll
 E:\Documentos\VisualStudio\source\repos\Pontodeajuda\bin\System.Security.Cryptography.Cng.dll
@@ -259,3 +263,6 @@ C:\Users\Pandora\Documents\Rafael\Ponto-de-Ajuda\obj\Debug\PontoDeAjuda.csproj.C
 C:\Users\Pandora\Documents\Rafael\Ponto-de-Ajuda\obj\Debug\PontoDeAjuda.csproj.CopyComplete
 C:\Users\Pandora\Documents\Rafael\Ponto-de-Ajuda\obj\Debug\PontoDeAjuda.dll
 C:\Users\Pandora\Documents\Rafael\Ponto-de-Ajuda\obj\Debug\PontoDeAjuda.pdb
+C:\Users\Pandora\Documents\Rafael\Ponto-de-Ajuda\obj\Debug\PontoDeAjuda.csprojAssemblyReference.cache
+=======
+>>>>>>> master

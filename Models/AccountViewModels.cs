@@ -65,6 +65,15 @@ namespace PontoDeAjuda.Models
     public class RegisterViewModel
     {
         [Required]
+        [Display(Name = "Nome")]
+        public string Nome { get; set; }
+        [Display(Name = "Sobrenome")]
+        public string Sobrenome { get; set; }
+
+        [Display(Name = "Perfil")]
+        public string Perfil { get; set; }
+
+        [Required]
         [EmailAddress]
         [Display(Name = "Email")]
         public string Email { get; set; }
