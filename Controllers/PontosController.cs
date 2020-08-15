@@ -18,7 +18,7 @@ namespace PontoDeAjuda.Controllers
         private PontoContext db = new PontoContext();
 
         // GET: Pontos
-        [Authorize(Roles = "Admin")]
+       
         public ActionResult Index()
         {
             var pontos = db.Pontos.Include(c => c.Doacoes);

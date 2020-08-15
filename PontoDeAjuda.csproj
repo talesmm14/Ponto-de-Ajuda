@@ -205,7 +205,9 @@
   <ItemGroup>
     <Content Include="assets\img\camera-girl.jpg" />
     <Content Include="assets\img\oquee.jpg" />
+    <Content Include="assets\img\rafael.jpg" />
     <Content Include="assets\img\star-sky.jpg" />
+    <Content Include="assets\img\tales.png" />
     <Content Include="assets\img\three-volunteers-packing-eatables-in-cardboard-box-DV6RHML.jpg" />
     <Content Include="assets\img\three-volunteers-packing-eatables-in-cardboard-box-HDTAJM9.jpg" />
     <Content Include="assets\img\transmissao.jpg" />
