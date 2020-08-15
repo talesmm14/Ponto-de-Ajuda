@@ -259,4 +259,3 @@ C:\Users\Pandora\Documents\Rafael\Ponto-de-Ajuda\obj\Debug\PontoDeAjuda.csproj.C
 C:\Users\Pandora\Documents\Rafael\Ponto-de-Ajuda\obj\Debug\PontoDeAjuda.csproj.CopyComplete
 C:\Users\Pandora\Documents\Rafael\Ponto-de-Ajuda\obj\Debug\PontoDeAjuda.dll
 C:\Users\Pandora\Documents\Rafael\Ponto-de-Ajuda\obj\Debug\PontoDeAjuda.pdb
-C:\Users\Pandora\Documents\Rafael\Ponto-de-Ajuda\obj\Debug\PontoDeAjuda.csprojAssemblyReference.cache
