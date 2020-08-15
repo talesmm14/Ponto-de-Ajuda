@@ -60,33 +60,32 @@
                             </dt>
 
                             <dd>
-                                <table class="table">
+                                <table>
                                     <tr>
-                                        <th>Doação</th>
-                                    </tr>
-                                    <tr>
-                                        <th>icone</th>
-                                    </tr>
-                                    @{ int cnt = 0;
+                                        @{ int cnt = 0;
+                                            List<PontoDeAjuda.Models.AssignedDoacaoData> doacoes = ViewBag.Doacoes;
 
-                                        foreach (var doacao in Model.Doacoes)
-                                        {
-                            <tr>
-                                <td>
-                                    @doacao.Nome
-                                </td>
-                                <td>
-                                    <i class="@doacao.icon"></i>
-                                </td>
-                            </tr>
- } }
-                                </table>
+                                            foreach (var doacao in doacoes)
+                                            {
+                                                if (cnt++ % 3 == 0)
+                                                {
+                                @:</tr><tr>
+                                }
+                                @:<td>
+                                    
+                                                    @doacao.Nome @:  <i class="@doacao.icon"></i> <br />
+                                                @:</td>
+                                            }
+                                @:</tr>
+                                        }
+                                    </table>
                             </dd>
 
                         </dl>
 
-                        <a href="@Url.Action("Edit", new { id = Model.PontoID })" class="btn btn-success pull-right">Editar</a>
-
+                        @if (User.IsInRole("Admin"))
+                        {
+            <a href="@Url.Action("Edit", new { id = Model.PontoID })" class="btn btn-success pull-right">Editar</a>}
 
                     </fieldset>
                 </div>

@@ -29,7 +29,9 @@
             @Html.DisplayFor(modelItem => item.icon)
         </td>
         <td>
-            @Html.ActionLink("Details", "Details", new { id=item.DoacaoID })
+            @Html.ActionLink("Details", "Details", new { id = item.DoacaoID })|
+            @Html.ActionLink("Details", "Details", new { id = item.DoacaoID }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.DoacaoID })
         </td>
     </tr>
 }

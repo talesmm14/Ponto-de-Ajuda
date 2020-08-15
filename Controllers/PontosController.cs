@@ -31,8 +31,19 @@ namespace PontoDeAjuda.Controllers
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
             Ponto ponto = db.Pontos.Find(id);
-            ponto.Doacoes = new List<Doacao>();
-            PopulateAssignedDoacaoData(ponto);
+            var allDoacoes = db.Doacoes;
+            var pontoDoacoes = new HashSet<int>(ponto.Doacoes.Select(c => c.DoacaoID));
+            var viewModel = new List<AssignedDoacaoData>();
+            foreach (var doacao in allDoacoes)
+            {
+                viewModel.Add(new AssignedDoacaoData
+                {
+                    DoacaoID = doacao.DoacaoID,
+                    Nome = doacao.Nome,
+                    Assigned = pontoDoacoes.Contains(doacao.DoacaoID)
+                });
+            }
+            ViewBag.Doacoes = viewModel;
             if (ponto == null)
             {
                 return HttpNotFound();

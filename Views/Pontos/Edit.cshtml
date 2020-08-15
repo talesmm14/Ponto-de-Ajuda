@@ -46,27 +46,27 @@
                                                 @Html.ValidationMessageFor(model => model.DataFinal, "", new { @class = "text-danger" })
                                             </div>
                                             <div class="form-group">
-                                                <div class="col-md-offset-2 col-md-10">
+                                                <div class="">
                                                     <table>
                                                         <tr>
                                                             @{ int cnt = 0;
-                                                                List<PontoDeAjuda.Models.AssignedDoacaoData> doacoes = ViewBag.Doacoes;
+                                                                                List<PontoDeAjuda.Models.AssignedDoacaoData> doacoes = ViewBag.Doacoes;
 
-                                                                foreach (var doacao in doacoes)
-                                                                {
-                                                                    if (cnt++ % 3 == 0)
-                                                                    {
-                                            @:</tr><tr>
-                                            }
-                                    @:<td>
-                                        <input type="checkbox"
-                                               name="selectedDoacoes"
-                                               value="@doacao.DoacaoID"
-                                               @(Html.Raw(doacao.Assigned ? "checked=\"checked\"" : "")) />
-                                                            @doacao.Nome @:  @doacao.icon
-                                                        @:</td>
-                                                    }
-                                    @:</tr>
+                                                                                foreach (var doacao in doacoes)
+                                                                                {
+                                                                                    if (cnt++ % 3 == 0)
+                                                                                    {
+                                                            @:</tr><tr>
+                                                            }
+                                            @:<td>
+                                                <input type="checkbox"
+                                                       name="selectedDoacoes"
+                                                       value="@doacao.DoacaoID"
+                                                       @(Html.Raw(doacao.Assigned ? "checked=\"checked\"" : "")) />
+                                                                    @doacao.Nome @:  <i class="@doacao.icon"></i> <br />
+                                                                @:</td>
+                                                            }
+                                            @:</tr>
                                                             }
                                                         </table>
                                                     </div>
@@ -76,7 +76,7 @@
                                                     <button class="btn btn-success" type="submit" id="cf-submit" name="submit">Criar</button>
                                                 </div>
                                                 <a href="@Url.Action("Create", "Index")">Ver ponto de Ajuda</a>
-</div>
+                                    </div>
 
                                     <!-- /.form-container -->
                                 </div>

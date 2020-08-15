@@ -1,15 +1,13 @@
 ﻿@model IEnumerable<PontoDeAjuda.Ponto>
 
-@{
-    ViewBag.Title = "Pontos";
-}
+@{ ViewBag.Title = "Pontos"; }
 
 <div class="page-header text-primary text-center">
     <h1>Pontos</h1>
 </div>
 
 <a href="@Url.Action("Create", "Pontos")" class="btn btn-info">Criar Novo</a>
-    
+
 
 <table class="table">
     <tr>
@@ -36,44 +34,47 @@
         </th>
         <th class="text-center">
             Suprimentos
-        </th><th></th>
+        </th>
+        <th></th>
     </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td class="text-center">
-            @Html.DisplayFor(modelItem => item.Nome)
-        </td>
-        <td class="text-center">
-            @Html.DisplayFor(modelItem => item.Descricao)
-        </td>
-        <td class="text-center">
-            @Html.DisplayFor(modelItem => item.Endereco)
-        </td>
-        <td class="text-center">
-            @Html.DisplayFor(modelItem => item.Telefone)
-        </td>
-        <td class="text-center">
-            @Html.DisplayFor(modelItem => item.DataFinal)
-        </td>
-        <td class="text-center">
-            @Html.DisplayFor(modelItem => item.CreationTime)
-        </td>
-        <td class="text-center">
-            @Html.DisplayFor(modelItem => item.Status)
-        </td>
-        <td class="text-center">
-            @foreach (var doacao in item.Doacoes)
-            {
-                @doacao.Nome @:  <i class="@doacao.icon"></i> <br />
-            }
-            </td>
-        <td class="text-center">
-            <a href="@Url.Action("Details", new { id=item.PontoID })" class="btn btn-sm btn-info">Detalhes</a>
-            
-
-        </td>
-    </tr>
+    @foreach (var item in Model)
+    {
+<tr>
+    <td class="text-center">
+        @Html.DisplayFor(modelItem => item.Nome)
+    </td>
+    <td class="text-center">
+        @Html.DisplayFor(modelItem => item.Descricao)
+    </td>
+    <td class="text-center">
+        @Html.DisplayFor(modelItem => item.Endereco)
+    </td>
+    <td class="text-center">
+        @Html.DisplayFor(modelItem => item.Telefone)
+    </td>
+    <td class="text-center">
+        @Html.DisplayFor(modelItem => item.DataFinal)
+    </td>
+    <td class="text-center">
+        @Html.DisplayFor(modelItem => item.CreationTime)
+    </td>
+    <td class="text-center">
+        @Html.DisplayFor(modelItem => item.Status)
+    </td>
+    <td class="text-center">
+        @foreach (var doacao in item.Doacoes)
+        {
+@doacao.Nome @:  <i class="@doacao.icon"></i> <br />
 }
+    </td>
+    <td class="text-center">
+        <a href="@Url.Action("Details", new { id=item.PontoID })" class="btn btn-sm btn-info">Detalhes</a>
+        @if (User.IsInRole("Admin"))
+        {
+<a href="@Url.Action("Delete", new { id = item.PontoID })" class="btn btn-sm btn-warning">Apagar</a>}
+
+    </td>
+</tr>}
 
 </table>

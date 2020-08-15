@@ -128,3 +128,4 @@ E:\Documentos\VisualStudio\source\repos\Pontodeajuda\obj\Debug\PontoDeAjuda.cspr
 E:\Documentos\VisualStudio\source\repos\Pontodeajuda\obj\Debug\PontoDeAjuda.csproj.CopyComplete
 E:\Documentos\VisualStudio\source\repos\Pontodeajuda\obj\Debug\PontoDeAjuda.dll
 E:\Documentos\VisualStudio\source\repos\Pontodeajuda\obj\Debug\PontoDeAjuda.pdb
+E:\Documentos\VisualStudio\source\repos\PontoDeAjuda\obj\Debug\PontoDeAjuda.csprojAssemblyReference.cache

@@ -40,6 +40,15 @@
                         <li class="nav-item">
                             @Html.ActionLink("Contato", "Contact", "Home")
                         </li>
+                        @if (User.IsInRole("Admin"))
+                        {
+                                    <li class="nav-item">
+                                        @Html.ActionLink("Doacoes", "Index", "Doacoes")
+                                    </li>
+                                    <li class="nav-item">
+                                        @Html.ActionLink("Perfis", "Index", "Role")
+                                    </li>
+                         }
                         <li class="nav-item">
                             @Html.Partial("_LoginPartial")
                         </li>
