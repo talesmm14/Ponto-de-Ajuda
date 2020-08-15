@@ -1,88 +1,99 @@
 ﻿@model PontoDeAjuda.Ponto
 
-@{
-    ViewBag.Title = "Detalhes";
-}
+@{ ViewBag.Title = "Detalhes"; }
 
-<h2>Detalhes</h2>
 
-<div>
-    <h4>Ponto de Ajuda</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.Nome)
-        </dt>
+<div class="content-block contact-3">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3">
+                <div id="contact" class="form-container">
+                    <fieldset>
+                        <div class="page-header">
+                            <h1 class="text-center text-success">
+                                Detalhes <br><small>Pontos de Ajuda</small>
+                            </h1>
+                        </div>
+                        <dl class="dl-horizontal">
+                            <dt>
+                                @Html.DisplayNameFor(model => model.Nome)
+                            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.Nome)
-        </dd>
+                            <dd>
+                                @Html.DisplayFor(model => model.Nome)
+                            </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Descricao)
-        </dt>
+                            <dt>
+                                @Html.DisplayNameFor(model => model.Descricao)
+                            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.Descricao)
-        </dd>
+                            <dd>
+                                @Html.DisplayFor(model => model.Descricao)
+                            </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Endereco)
-        </dt>
+                            <dt>
+                                @Html.DisplayNameFor(model => model.Endereco)
+                            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.Endereco)
-        </dd>
+                            <dd>
+                                @Html.DisplayFor(model => model.Endereco)
+                            </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Telefone)
-        </dt>
+                            <dt>
+                                @Html.DisplayNameFor(model => model.Telefone)
+                            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.Telefone)
-        </dd>
+                            <dd>
+                                @Html.DisplayFor(model => model.Telefone)
+                            </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.DataFinal)
-        </dt>
+                            <dt>
+                                @Html.DisplayNameFor(model => model.DataFinal)
+                            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.DataFinal)
-        </dd>
+                            <dd>
+                                @Html.DisplayFor(model => model.DataFinal)
+                            </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Doacoes)
-        </dt>
+                            <dt>
+                                @Html.DisplayNameFor(model => model.Doacoes)
+                            </dt>
 
-        <dd>
-            <table class="table">
-                <tr>
-                    <th>Doação</th>
-                </tr>
-                <tr>
-                    <th>icone</th>
-                </tr>
-                @{
-                    int cnt = 0;
+                            <dd>
+                                <table class="table">
+                                    <tr>
+                                        <th>Doação</th>
+                                    </tr>
+                                    <tr>
+                                        <th>icone</th>
+                                    </tr>
+                                    @{ int cnt = 0;
 
-                    foreach (var doacao in Model.Doacoes)
-                    {
-                        <tr>
-                            <td>
-                                @doacao.Nome
-                            </td>
-                            <td>
-                                <i class="@doacao.icon"></i>
-                            </td>
-                        </tr>
-                    }
-                }
-            </table>
-        </dd>
+                                        foreach (var doacao in Model.Doacoes)
+                                        {
+                            <tr>
+                                <td>
+                                    @doacao.Nome
+                                </td>
+                                <td>
+                                    <i class="@doacao.icon"></i>
+                                </td>
+                            </tr>
+ } }
+                                </table>
+                            </dd>
 
-    </dl>
-</div>
-<p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.PontoID }) |
-    @Html.ActionLink("Back to List", "Index")
-</p>
+                        </dl>
+
+                        <a href="@Url.Action("Edit", new { id = Model.PontoID })" class="btn btn-success pull-right">Editar</a>
+
+
+                    </fieldset>
+                </div>
+                <!-- /.form-container -->
+            </div>
+        </div>
+        <!-- /.row -->
+    </div>
+    <!-- /.container -->
+</div> 

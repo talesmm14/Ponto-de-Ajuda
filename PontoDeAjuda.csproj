@@ -203,6 +203,7 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include=".gitignore" />
     <Content Include="assets\img\camera-girl.jpg" />
     <Content Include="assets\img\oquee.jpg" />
     <Content Include="assets\img\rafael.jpg" />
