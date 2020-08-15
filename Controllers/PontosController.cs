@@ -17,6 +17,10 @@ namespace PontoDeAjuda.Controllers
     {
         private PontoContext db = new PontoContext();
         // GET: Pontos
+<<<<<<< HEAD
+       
+=======
+>>>>>>> master
         public ActionResult Index()
         {
             var pontos = db.Pontos.Include(c => c.Doacoes);

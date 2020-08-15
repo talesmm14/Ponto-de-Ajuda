@@ -1,44 +1,70 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title - Ponto de Ajuda</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,300,600,700" rel="stylesheet">
+    <link href="http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet">
 </head>
 <body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                @Html.ActionLink("Pontos de Ajuda", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+    <header id="header-1" class="header-1 soft-scroll">
+        <!-- Navbar -->
+        <nav class="main-nav navbar-fixed-top headroom headroom--pinned">
+            <div class="container">
+                <!-- Brand and toggle -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <!-- Navigation -->
+                <div class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav navbar-right">
+
+                        <li class=" nav-item">
+                            @Html.ActionLink("Início", "Index", "Home")
+                        </li>
+                        <li class="nav-item">
+                            @Html.ActionLink("Covid-19", "Covid", "Home")
+                        </li>
+                        <li class="nav-item">
+                            @Html.ActionLink("Sobre", "About", "Home")
+                        </li>
+                        <li class="nav-item">
+                            @Html.ActionLink("Contato", "Contact", "Home")
+                        </li>
+                        <li class="nav-item">
+                            @Html.Partial("_LoginPartial")
+                        </li>
+
+
+                    </ul>
+                    <!--//nav-->
+                </div>
+                <!--// End Navigation -->
             </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Início", "Index", "Home")</li>
-                    <li>@Html.ActionLink("Posso ajudar", "Create", "Pontos")</li>
-                    <li>@Html.ActionLink("Preciso de ajuda", "Index", "Pontos")</li>
-                    <li>@Html.ActionLink("Sobre", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contato", "Contact", "Home")</li>
-                </ul>
-                @Html.Partial("_LoginPartial")
-            </div>
-        </div>
-    </div>
-    <div class="container body-content">
+            <!--// End Container -->
+        </nav>
+        <!--// End Navbar -->
+    </header>
+    <div class=" body-content">
         @RenderBody()
         <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year - Ponto De Ajuda (Tales &Aacute; Rafael)</p>
-        </footer>
+
+        <div class="copyright-bar bg-black">
+            <div class="container">
+                <p class="pull-left small">© Ponto de Ajuda</p>
+                <p class="pull-right small"><i class="fa fa-heart pomegranate"></i> Ajude quem precisa</p>
+            </div>
+        </div>
+
     </div>
 
     @Scripts.Render("~/bundles/jquery")
@@ -46,3 +72,4 @@
     @RenderSection("scripts", required: false)
 </body>
 </html>
+

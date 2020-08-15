@@ -4,70 +4,74 @@
     ViewBag.Title = "Pontos";
 }
 
-<h2>Pontos</h2>
+<div class="page-header text-primary text-center">
+    <h1>Pontos</h1>
+</div>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
+<a href="@Url.Action("Create New", "Create")" class="btn btn-info">Criar Novo</a>
+    
+
 <table class="table">
     <tr>
-        <th>
+        <th class="text-center">
             @Html.DisplayNameFor(model => model.Nome)
         </th>
-        <th>
+        <th class="text-center">
             @Html.DisplayNameFor(model => model.Descricao)
         </th>
-        <th>
+        <th class="text-center">
             @Html.DisplayNameFor(model => model.Endereco)
         </th>
-        <th>
+        <th class="text-center">
             @Html.DisplayNameFor(model => model.Telefone)
         </th>
-        <th>
+        <th class="text-center">
             @Html.DisplayNameFor(model => model.DataFinal)
         </th>
-        <th>
+        <th class="text-center">
             @Html.DisplayNameFor(model => model.CreationTime)
         </th>
-        <th>
+        <th class="text-center">
             @Html.DisplayNameFor(model => model.Status)
         </th>
-        <th>
+        <th class="text-center">
             Suprimentos
         </th><th></th>
     </tr>
 
 @foreach (var item in Model) {
     <tr>
-        <td>
+        <td class="text-center">
             @Html.DisplayFor(modelItem => item.Nome)
         </td>
-        <td>
+        <td class="text-center">
             @Html.DisplayFor(modelItem => item.Descricao)
         </td>
-        <td>
+        <td class="text-center">
             @Html.DisplayFor(modelItem => item.Endereco)
         </td>
-        <td>
+        <td class="text-center">
             @Html.DisplayFor(modelItem => item.Telefone)
         </td>
-        <td>
+        <td class="text-center">
             @Html.DisplayFor(modelItem => item.DataFinal)
         </td>
-        <td>
+        <td class="text-center">
             @Html.DisplayFor(modelItem => item.CreationTime)
         </td>
-        <td>
+        <td class="text-center">
             @Html.DisplayFor(modelItem => item.Status)
         </td>
-        <td>
+        <td class="text-center">
             @foreach (var doacao in item.Doacoes)
             {
                 @doacao.Nome @:  <i class="@doacao.icon"></i> <br />
             }
             </td>
-        <td>
-            @Html.ActionLink("Details", "Details", new { id=item.PontoID })
+        <td class="text-center">
+            <a href="@Url.Action("Details", new { id=item.PontoID })" class="btn btn-sm btn-info">Detalhes</a>
+            
+
         </td>
     </tr>
 }
